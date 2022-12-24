@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con colores</title>
+    <style>
+        table {
+            border: 1px solid rgb(163, 148, 148);
+            caption-side: bottom;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            width: 25%;
+            text-align: left;
+            border: 1px solid rgb(163, 148, 148);
+            border-left: none;
+            border-right: none;
+            padding: 10px 1em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Ejercicio 1 */
+        tr:nth-of-type(1) {
+            background-color: #b1acac;
+            color: #fff;
+        }
+
+        tr:nth-of-type(2n+2) {
+            background-color: #dcdcdc;
+        }
+
+        tr:nth-of-type(2n+3) {
+            background-color: #706d69;
+        }
+
+        td:nth-of-type(n+2),
+        th:nth-of-type(n+2) {
+            text-align: right;
+        }
+
+        /* Ejercicio 2. En el mismo archivo anterior, aplica los siguientes estilos al div con clase contenedor1:
+        */
+        /* a)A los párrafos que no tienen la clase fancy, texto de color verde */
+        .contenedor1 p:not([class~='fancy']) {
+            color: green;
+        }
+
+        /* b)A los elementos que no son párrafos, texto subrayado (text-decoration:underline). */
+        .contenedor1 :not(p) {
+            text-decoration: underline;
+        }
+
+        /* Ejercicio 3. En el mismo archivo anterior, aplica los siguientes estilos al div con clase contenedor2: */
+
+        /* a)Haz que el tercer elemento span se ponga el texto de color lima. */
+        .contenedor2 span:nth-of-type(3) {
+            color: lime;
+        }
+
+        /* b)Haz que el último span se subraye. */
+        .contenedor2 span:last-of-type {
+            text-decoration: underline;
+        }
+
+        /* c)Haz que el primer elemento em tenga fondo rojo, indicándolo de dos formas diferentes. */
+        .contenedor2 em:nth-of-type(1) {
+            background-color: red;
+        }
+
+        .contenedor2 em:first-of-type {
+            background-color: red;
+        }
+
+        /* d)Que el último elemento sub esté tachado. */
+        .contenedor2 sub:last-of-type {
+            text-decoration: line-through;
+        }
+
+        /* Ejercicio 4 */
+        .ej4 div {
+            background-color: #8a2be2;
+            color: white;
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        /* a)Colorea el cuadro número 6 */
+        /* .ej4 div:nth-of-type(6) {
+            background-color: #e91e63;
+        } */
+        /* b)Colorea los pares */
+        /* .ej4 div:nth-of-type(2n+2) {
+            background-color: #e91e63;
+        } */
+
+        /* c)Colorea los impares */
+        /* .ej4 div:nth-of-type(2n+1) {
+            background-color: #e91e63;
+        } */
+        /* d)Colorea los cuadros múltiplos de 3, empezando en el tercero */
+        /* .ej4 div:nth-of-type(3n+3) {
+            background-color: #e91e63;
+        } */
+        /* e)Colorea los cuadros del 8 al 20 incluidos */
+        /* .ej4 div:nth-of-type(n+8) {
+            background-color: #e91e63;
+        } */
+        /* f)A partir del 5 colorea uno de cada 3: 5, 8, 11, 14, 17, 20 */
+        /* .ej4 div:nth-of-type(3n+5) {
+            background-color: #e91e63;
+        } */
+        /* g)Colorea el último cuadro */
+        .ej4 div:last-of-type {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Tabla de datos</caption>
+        <tr>
+            <th>Nombre del equipo</th>
+            <th>Ganados</th>
+            <th>Perdidos</th>
+            <th>Puntos</th>
+        </tr>
+        <tr>
+            <td>Cáceres</td>
+            <td>49</td>
+            <td>33</td>
+            <td>598</td>
+        </tr>
+        <tr>
+            <td>León</td>
+            <td>70</td>
+            <td>12</td>
+            <td>789</td>
+        </tr>
+        <tr>
+            <td>Burgos</td>
+            <td>38</td>
+            <td>44</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>Ávila</td>
+            <td>18</td>
+            <td>64</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>Soria</td>
+            <td>17</td>
+            <td>65</td>
+            <td>496</td>
+        </tr>
+        <tr>
+            <td>Valladolid</td>
+            <td>32</td>
+            <td>50</td>
+            <td>700</td>
+        </tr>
+        <tr>
+            <td>Bilbao</td>
+            <td>53</td>
+            <td>29</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>Oviedo</td>
+            <td>41</td>
+            <td>41</td>
+            <td>690</td>
+        </tr>
+        <tr>
+            <td>Lugo</td>
+            <td>38</td>
+            <td>44</td>
+            <td>598</td>
+        </tr>
+        <tr>
+            <td>Orense</td>
+            <td>32</td>
+            <td>50</td>
+            <td>700</td>
+        </tr>
+    </table>
+    <div class="contenedor1">
+        <p>Soy un párrafo.</p>
+        <p class="fancy">¡Soy muy elegante!</p>
+        <div>NO soy un párrafo.</div>
+    </div>
+    <div class="contenedor2">
+        <span>Este es un span.</span><br>
+        <span>Este es otro span.</span><br>
+        <em>Esto está enfatizado.</em><br>
+        <span>¡Guauu, este span se pone color lima!</span><br>
+        <sub>Esto debería estar tachado.</sub><br>
+        <em>Esto también está enfatizado.</em><br>
+        <span>Aquí hay un último span.</span><br>
+        <sub>Y esto también debería estar tachado.</sub><br>
+    </div>
+    <!-- Ejercicio 4 -->
+    <div class="ej4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 19_12_2022</title>
+    <style>
+        #textos {
+            /* Se pueden usar palabras clave */
+            font-size: small;
+            font-size: xx-small;
+            font-size: medium;
+            font-size: large;
+            font-size: x-large;
+        }
+
+        p:nth-of-type(1) {
+            /* Familia: de mas especifica a mas generica hasta acabar con la generica */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: Helvetica, sans-serif;
+            /* Estilo: cursiva u oblicua(permite definir el grado de inclinacion, no funciona muy bien) */
+            font-style: italic;
+            font-style: oblique 15deg;
+            /* Extender o comprimir letras */
+            font-stretch: condensed;
+            font-stretch: expanded;
+            /* Espaciado entre letras */
+            letter-spacing: 1cm;
+            letter-spacing: 2px;
+            /* Espaciado de palabras */
+            word-spacing: 25px;
+            /* Versalitas: Letras mayusculas que ocupan el tamaño de las minusculas */
+            font-variant: small-caps;
+            /* Interlineado: desde linea base hasta ascendente */
+            line-height: 1cm;
+        }
+
+        p:nth-of-type(2) {
+            /* ATAJO: a veces solo se pueden usar palabras clave. Tamaño letra / Distancia entre lineas.*/
+            font: italic small-caps bold ultra-condensed 2em/30px Helvetica;
+        }
+
+        p:nth-of-type(3) {
+            /* Subrayado, tachado, etc. */
+            text-decoration: underline purple wavy 5px;
+            line-height: 2cm;
+            text-decoration: underline overline purple wavy 2px;
+            /* Centrar texto en un bloque */
+            text-align: justify;
+            /* Cambiar a minusculas, mayusculas o capilatize(solo la primera letra de cada palabra)*/
+            text-transform: capitalize;
+        }
+
+        p:nth-of-type(4) {
+            /* Sangria */
+            text-indent: 2cm;
+            /* Sombra: desplazamiento horizontal, desplazamiento vertical, blur y color */
+            text-shadow: 5px 5px 5px rebeccapurple;
+            /* Opacidad */
+            color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        LoOrem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis delectus facere. Asperiores animi,
+        iusto ut, fuga eos quas facere dolor, nisi maxime id error eligendi reprehenderit deleniti a laboriosam.
+    </p>
+</body>
+
+</html>

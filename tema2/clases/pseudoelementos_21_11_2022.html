@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos dia 21_11_2022</title>
+    <style>
+        /* Pseudo-elementos: permiten añadir estilos a una parte concreta del documento. Siempre al final */
+        p::first-line {
+            color: red;
+        }
+
+        p:first-child::first-line {
+            color: blue;
+        }
+
+        p:first-child span::first-line {
+            color: blue;
+        }
+
+        /* Primera linea */
+        p::first-line {
+            color: red;
+        }
+
+        /* Primera letra */
+        p::first-letter {
+            font-size: 40px;
+        }
+
+        /* Cuando seleccionamos algun texto con el raton */
+        p::selection {
+            background-color: pink;
+            color: white;
+        }
+
+        /* Escribe texto o imagenes antes de. No escribe etiquetas (ejemplo <br>) */
+        p:nth-of-type(2)::before {
+            content: "IMPORTANTE";
+            color: darkgreen;
+            font-size: 2em;
+        }
+
+        /* p:nth-of-type(2)::before {
+            content: url(./imagen/arrow.jpg);
+            color: darkgreen;
+        } */
+
+        /* Escribe texto o imagenes despues de. No escribe etiquetas (ejemplo <br>)  */
+        p:nth-of-type(3)::after {
+            content: "AGOTADO";
+            color: darkgreen;
+            font-size: 2em;
+        }
+
+        /* p:nth-of-type(3)::after {
+            content: url(./imagen/arrow.jpg);
+            color: darkgreen;
+        } */
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque minus eos unde maiores eum. Dolor natus, iusto
+        quibusdam, provident nihil iste molestias minima reiciendis totam ea necessitatibus deleniti iure?
+        Iure quidem ea, doloribus error inventore illum odio sequi eius debitis quaerat minima! Ullam repudiandae
+        perferendis totam possimus cumque vero quidem eius minima rem, consectetur maxime, quisquam dolor tempora
+        reiciendis?
+        Tenetur, hic sit delectus porro a in dignissimos dolorem veniam! Accusamus pariatur temporibus atque numquam
+        sequi ea perferendis eius ratione libero consectetur facere earum, quasi enim inventore tempore doloribus. Id?
+        Alias aliquid asperiores, hic omnis eum accusantium, dolore quo reprehenderit animi sit dolores. Accusantium
+        fugiat nisi ab, vel quis culpa perspiciatis temporibus itaque? Saepe, eaque perferendis vel deserunt reiciendis
+        ipsum.
+        Animi tenetur numquam eaque? Repellat, sapiente veritatis. Laborum ipsam sint quis fuga, error maiores corporis
+        nam rem odio unde harum nulla accusamus enim mollitia corrupti molestias maxime. Assumenda, nobis aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque minus eos unde maiores eum. Dolor natus, iusto
+        quibusdam, provident nihil iste molestias minima reiciendis totam ea necessitatibus deleniti iure?
+        Iure quidem ea, doloribus error inventore illum odio sequi eius debitis quaerat minima! Ullam repudiandae
+        perferendis totam possimus cumque vero quidem eius minima rem, consectetur maxime, quisquam dolor tempora
+        reiciendis?
+        Tenetur, hic sit delectus porro a in dignissimos dolorem veniam! Accusamus pariatur temporibus atque numquam
+        sequi ea perferendis eius ratione libero consectetur facere earum, quasi enim inventore tempore doloribus. Id?
+        Alias aliquid asperiores, hic omnis eum accusantium, dolore quo reprehenderit animi sit dolores. Accusantium
+        fugiat nisi ab, vel quis culpa perspiciatis temporibus itaque? Saepe, eaque perferendis vel deserunt reiciendis
+        ipsum.
+        Animi tenetur numquam eaque? Repellat, sapiente veritatis. Laborum ipsam sint quis fuga, error maiores corporis
+        nam rem odio unde harum nulla accusamus enim mollitia corrupti molestias maxime. Assumenda, nobis aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea atque minus eos unde maiores eum. Dolor natus, iusto
+        quibusdam, provident nihil iste molestias minima reiciendis totam ea necessitatibus deleniti iure?
+        Iure quidem ea, doloribus error inventore illum odio sequi eius debitis quaerat minima! Ullam repudiandae
+        perferendis totam possimus cumque vero quidem eius minima rem, consectetur maxime, quisquam dolor tempora
+        reiciendis?
+        Tenetur, hic sit delectus porro a in dignissimos dolorem veniam! Accusamus pariatur temporibus atque numquam
+        sequi ea perferendis eius ratione libero consectetur facere earum, quasi enim inventore tempore doloribus. Id?
+        Alias aliquid asperiores, hic omnis eum accusantium, dolore quo reprehenderit animi sit dolores. Accusantium
+        fugiat nisi ab, vel quis culpa perspiciatis temporibus itaque? Saepe, eaque perferendis vel deserunt reiciendis
+        ipsum.
+        Animi tenetur numquam eaque? Repellat, sapiente veritatis. Laborum ipsam sint quis fuga, error maiores corporis
+        nam rem odio unde harum nulla accusamus enim mollitia corrupti molestias maxime. Assumenda, nobis aut.</p>
+</body>
+
+</html>

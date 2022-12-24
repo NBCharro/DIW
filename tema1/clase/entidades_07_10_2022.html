@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entidades</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            height: 200px;
+        }
+
+        .columnas2 {
+            background-color: rgb(75, 255, 150);
+        }
+
+        table caption {
+            font-size: 1.4em;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Esto es un texto con entidades</p>
+    <p>Esto es un menor que (less than): &lt;</p>
+    <p>Para que no se rompa el espacio entre las palabras: &nbsp;</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi id nulla aliquid ipsum laboriosam ullam cum eum
+        consequatur odio magni <strong>Coca&nbsp;cola</strong> optio cumque iure iusto accusamus esse qui, suscipit
+        expedita deleniti,
+        provident
+        reiciendis porro quaerat voluptas nihil possimus! Ipsam vitae consequatur eaque libero, repellat nam, error
+        assumenda ab iure esse debitis.</p>
+    <table>
+        <caption>Titulo de la tabla</caption>
+        <colgroup>
+            <col span="2" class="columnas2">
+            <col style="background-color:rgb(0,255,255)">
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="3">Titulo 1</th>
+                <th>Titulo 2</th>
+            </tr>
+            <tr>
+                <th>Cabecera 1</th>
+                <th>Cabecera 2</th>
+                <th>Cabecera 3</th>
+                <th>Cabecera 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Encabezado 1</td>
+                <td>Texto 1</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Encabezado 2</td>
+                <td>Texto 2</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Texto 3</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">Encabezado 4</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td colspan="1"></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

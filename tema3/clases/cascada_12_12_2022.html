@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada 12_12_2022</title>
+    <style>
+        /* La cascada sirve para cuando existan reglas contradictorias saber cuales se van a utilizar */
+        /* Hay que tener en cuenta: origen, especifidad, "important" y el orden */
+        /* ORIGEN: del programador, del usuario cambiandolo desde F12 del navegador. */
+        /* ESPECIFIDAD: hay que tener en cuenta la especifidad. Cuanto mas especifico mas prioridad */
+        p {
+            color: red;
+            /* IMPORTANT: pisa todo lo demas. */
+            color: red !important;
+        }
+
+        .parrafo {
+            /* La clase es mas especifica que el selector general p */
+            color: green;
+            /* ORDEN: lo ultimo que aparece escrito es lo que primara */
+            color: green !important;
+        }
+
+        #parrafo1 {
+            /* El ID es mas especifico que la clase */
+            color: blue;
+        }
+
+        /* Si ponemos el color dentro del HTML(en linea) tiene la maxima prioridad */
+
+        /* Para calcular la especifidad usamos: A1 N2 N3 N4. MIRAR APUNTES */
+        /* A1: selector en linea */
+        /* N2: ID */
+        /* N3: clase, pseudoclase(:hover) y selector atributo */
+        /* N4: elemento o pseudoelemento */
+        /* p -> especifidad 1 */
+        /* .parrafo -> especifidad 10 */
+        /* #parrafo1 -> especifidad 100 */
+        /* style="color:aqua;" -> especifidad 1000 */
+        /* article>h1 -> especifidad 2 */
+        /* p.importante -> especifidad 11 */
+        /* a.importante:visited -> especifidad 21 */
+        /* .contenedor>p>#imagen -> especifidad 111 */
+        /* p#demo -> especifidad 101 */
+        /* p.textos.test1 -> especifidad 21 */
+        /* h1+p::first-letter -> especifidad 3 */
+        /* p[id="parrafo1"] -> especifidad 11 */
+        /* #parrafo1 -> especifidad 100 */
+    </style>
+</head>
+
+<body>
+    <p class="parrafo" id="parrafo1">
+        <!-- <p class="parrafo" id="parrafo1" style="color:aqua;"> -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium blanditiis
+        dicta perspiciatis itaque facere deserunt dolores doloremque nisi cupiditate aliquid sint et nobis aperiam est,
+        voluptatem commodi unde ullam numquam.
+    </p>
+</body>
+
+</html>

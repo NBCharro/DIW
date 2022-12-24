@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>PR0205 - Modelo de cajas</title>
+	<style>
+		body {
+			background-color: #b2cfff;
+		}
+
+		main {
+			width: 720px;
+			background-color: #77a0ff;
+			border: 1px solid #1141b2;
+			margin: 0 auto;
+		}
+
+		main::before {
+			background-image: url("./logos.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: inline-block;
+			width: 200px;
+			height: 120px;
+			content: "";
+			margin: 50px;
+		}
+
+		div:nth-of-type(1) {
+			background-color: #1141b2;
+			border-bottom: 2px dashed #77a0ff;
+			width: 90%;
+			margin: 0 auto;
+			color: white;
+			padding: 5px;
+		}
+
+		h1 {
+			border: 2px solid white;
+			text-align: center;
+			width: 60%;
+			height: 80px;
+			line-height: 80px;
+			margin: 30px auto;
+		}
+
+		div:nth-of-type(2) {
+			width: 75%;
+			background-color: #ffc243;
+			margin: 30px auto;
+			padding: 10px;
+		}
+
+		h2 {
+			background-image: url("./patron.jpg");
+			width: 50%;
+		}
+
+		h2:nth-of-type(1) {
+			position: relative;
+			left: 48%;
+			text-align: right;
+		}
+
+		p:nth-of-type(1):before {
+			background-image: url("./computer.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 200px;
+			height: 150px;
+			content: "";
+			float: left;
+			margin: 20px;
+		}
+
+		li {
+			width: 95%;
+			position: relative;
+			left: 5%;
+		}
+
+		h2:nth-of-type(2) {
+			clear: both;
+			margin-left: 2%;
+			padding: 5px 10px;
+		}
+
+		p {
+			padding-left: 2%;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque urna nisl
+		</div>
+		<h1>Morbi pulvinar lacus </h1>
+		<div>
+			Phasellus vitae nibh vel tortor cursus tempor. Etiam at est sed mi consequat congue. In nunc neque, mollis
+			at ultricies et, vulputate sed nunc. Suspendisse quis purus ac purus commodo ultrices. Sed sit amet purus
+			nec diam ornare scelerisque non nec eros. Sed vel feugiat sem, sed imperdiet turpis. Phasellus elementum
+			molestie sagittis.
+		</div>
+		<h2>
+			Sed sit amet purus
+		</h2>
+		<p>
+			Curabitur laoreet consequat tellus, rhoncus elementum lacus ullamcorper id. Nullam vel sem volutpat,
+			tincidunt velit vel, egestas felis. Sed viverra orci et ante sollicitudin, ac dictum neque suscipit.
+		</p>
+		<ul>
+			<li>
+				Aenean vehicula felis porttitor quam maximus, a blandit lacus pretium.
+			</li>
+			<li>
+				Nam at aliquet velit, in feugiat felis.
+			</li>
+			<li>
+				In fringilla blandit mauris, eget dapibus odio convallis vel.
+			</li>
+		</ul>
+
+		<h2>
+			Donec at est scelerisque
+		</h2>
+		<p>
+			Donec at est scelerisque mauris condimentum vulputate consequat vel ligula. Curabitur placerat scelerisque
+			leo sit amet gravida. Curabitur rhoncus nisl nibh, non blandit mi rutrum nec. Etiam feugiat diam quis
+			elementum bibendum.
+		</p>
+	</main>
+</body>
+
+</html>

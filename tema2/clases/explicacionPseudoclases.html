@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pseudo-Clases CSS</title>
+	<link rel="stylesheet" href="css/pseudoclases.css" type="text/css">
+	<style>
+		/* De todos los parrafos, el primer em cuyo padre sea un parrafo a cualquier nivel. */
+		p em:first-child {
+			color: red;
+		}
+
+		.parrafos p:first-child {
+			background-color: yellow;
+		}
+
+		.elementos p:first-child {
+			/* En este caso no hace nada porque el primer hijo no es un p, es un div */
+			background-color: yellow;
+		}
+
+		/* De la clase parrafos, el ultimo p. Si el p es el ultimo hijo*/
+		.parrafos p:last-child {
+			background-color: green;
+		}
+
+		/* Cuando queremos una posicion especifica */
+		/* .lista li:nth-child(2){ El segundo li */
+		/* .lista li:nth-child(an+b) { Posicion aritmetica: 3n+2 con n>=0, es decir, desde el segundo seleccionamos cada 3*/
+		.lista li:nth-child(odd) {
+			color: red;
+		}
+
+		.lista li:nth-child(even) {
+			color: green;
+		}
+
+		.lista li:nth-child(3n+2) {
+			background-color: beige;
+		}
+
+		.lista li:nth-last-child(2) {
+			background-color: violet;
+		}
+
+		/* Elegimos por tipo cuando hay una mezcla de tipos. Selecciona el primero de su tipo */
+		.elementos p:first-of-type {
+			background-color: coral;
+		}
+
+		p em:first-of-type {
+			/* Es a cualquier nivel: el primer em si esta dentro de un p, aunque ese em tenga otros padres*/
+			background-color: cyan;
+		}
+
+		.lista2 p:last-of-type {
+			background-color: yellow;
+		}
+
+		.lista2 div:nth-of-type(1) {
+			background-color: blue;
+			color: white;
+		}
+
+		/* Para elementos vacios */
+		.vacio p:empty {
+			height: 4px;
+			width: 50%;
+			background-color: black;
+			border: 2px solid red;
+		}
+
+		/* Hijo unico */
+		.grupo p:only-child {
+			background-color: teal;
+			color: cornsilk;
+		}
+
+		/* Unico de ese tipo */
+		.elementos span:only-of-type {
+			border: 3px solid red;
+		}
+
+		/* Selecciona algo que no cumpla */
+		.notThis :not(p) {
+			color: darkorchid;
+			background-color: cornflowerblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="contenedor">
+		<h1 class="titulo">Pseudo-clases</h1>
+		<div class="grupo">
+			<h2>Enlaces: :link / :visited / :hover / :active </h2>
+			<a class="enlace" href="#">Ir a página web!</a>
+			<a class="enlace" href="https://www.google.com">Ir a Google!</a>
+		</div>
+		<div class="grupo">
+			<h2>:first-child / :last-child</h2>
+			<div class="parrafos">
+				<p>Soy el primer parrafo!</p>
+				<p>Soy el segundo parrafo!</p>
+				<p>Soy el tercer parrafo!</p>
+			</div>
+		</div>
+		<div class="grupo">
+			<h2>:first-of-type / :last-of-type</h2>
+			<div class="elementos">
+				<div>Hola soy un div!</div>
+				<p>Hola soy un parrafo!</p>
+				<span>Hola soy un span!</span>
+				<p>Hola soy otro parrafo!</p>
+				<div>Hola soy otro div!</div>
+			</div>
+		</div>
+		<div class="grupo">
+			<h2>:nth-child() / :nth-last-child</h2>
+			<ul class="lista">
+				<li>Soy la opción #1</li>
+				<li>Soy la opción #2</li>
+				<li>Soy la opción #3</li>
+				<li>Soy la opción #4</li>
+				<li>Soy la opción #5</li>
+				<li>Soy la opción #6</li>
+				<li>Soy la opción #7</li>
+				<li>Soy la opción #8</li>
+			</ul>
+		</div>
+		<div class="grupo">
+			<h2>:nth-of-type() / :nth-last-of-type()</h2>
+			<div class="lista2">
+				<div>Hola soy un div!</div>
+				<p>Hola soy un parrafo!</p>
+				<p>Hola soy otro parrafo!</p>
+				<span>Hola soy un span!</span>
+				<p>Hola soy otro parrafo!</p>
+				<div>Hola soy otro div!</div>
+			</div>
+		</div>
+		<div class="grupo">
+			<h2>:only-child</h2>
+			<div class="lista3">
+				<p>Hola, soy el unico hijo de esta lista!</p>
+			</div>
+		</div>
+		<div class="grupo">
+			<h2>:only-of-type</h2>
+			<div class="lista4">
+				<div>Hoy, soy un div.</div>
+				<p>Hola, soy el unico parrafo de esta lista!</p>
+				<div>Hoy, soy un div.</div>
+				<div>Hoy, soy un div.</div>
+			</div>
+		</div>
+		<div class="grupo">
+			<h2>Vacío :empty</h2>
+			<div class="vacio">
+				<p></p>
+				<p>A paragraph.</p>
+				<p>Another paragraph.</p>
+			</div>
+		</div>
+		<div class="grupo">
+			<h2>:not()</h2>
+			<div class="notThis">
+				<h3>This is a heading</h3>
+				<p>This is a paragraph.</p>
+				<p>This is another paragraph.</p>
+				<div>This is some text in a div element.</div>
+				<a href="https://www.w3schools.com" target="_blank">Link to W3Schools!</a>
+			</div>
+		</div>
+	</div>
+	<p>Lorem <span><em>ipsum dolor </em></span>sit amet consectetur adipisicing elit. Quas corporis sequi non, possimus
+		<em>fuga aperiam voluptatem </em>amet labore, laborum, nam dolore <em>çrecusandae eveniet quis ad! Eos
+			veniam</em> maiores dignissimos sunt.
+	</p>
+</body>
+
+</html>

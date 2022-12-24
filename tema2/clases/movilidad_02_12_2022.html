@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tipos de elementos Dia 02_12_2022</title>
+	<style>
+		/* Elemento tipo bloque ocupan todo el ancho: div, p, aside, head, main, ul, etc */
+		/* Comienzan siempre en nueva linea, permiten otros elementos en su interior */
+		/* Los elementos tipo bloque permiten cambiar width, height, margin y padding */
+		/* El navegador por defecto les pone margen */
+		div,
+		p {
+			border: 1px solid black;
+		}
+
+		#div2 {
+			width: 50%;
+			height: 20px;
+			padding: 5px 25px;
+		}
+
+		#parrafo2 {
+			height: 40px;
+			overflow-y: scroll;
+			width: 65%;
+		}
+
+		/* Elemento tipo linea NO ocupan todo el ancho: span, img, a, strong, em, etc */
+		/* Ocupan unicamente su contenido */
+		/* NO permiten contener otro tipo de elementos, permite pero no es recomendable */
+		img {
+			width: 150px;
+		}
+
+		/* Los elementos tipo linea NO permiten cambiar width, height, margin ni padding de forma adecuada */
+		span,
+		a {
+			width: 100px;
+			/* padding: 150px; */
+			background-color: blueviolet;
+		}
+
+		/* Para cambiar el comportamiento de los elementos usamos la propiedad Display */
+		#parrafo3 {
+			background-color: aqua;
+			/* Ni es visible ni ocupa espacio */
+			/* display: none; */
+			/* No es visible pero si ocupa espacio */
+			/* visibility: hidden; */
+			/* Para tipo bloque que se comporten como tipo linea */
+			display: inline;
+			/* Podemos modificar width,height,margin y padding pero se comporta como tipo linea */
+			/* display: inline-block; */
+		}
+
+		a {
+			/* Para tipo linea que se comporte como tipo bloque */
+			display: block;
+			width: 250px;
+		}
+
+		/* Float modifica a ese elemento y a los que le siguen */
+		#imagen {
+			width: 200px;
+			float: left;
+			margin: 10px;
+		}
+
+		.parrafosJuntos {
+			background-color: dodgerblue;
+		}
+
+		/* Para evitar que a los elementos ya no les afecte el float */
+		p.parrafosJuntos:nth-of-type(7) {
+			clear: both;
+		}
+
+		/* Para centrar un div en una pagina */
+		#centrarDiv {
+			background-color: aqua;
+			width: 200px;
+			height: 80px;
+			/* Metodo 1: margin auto */
+			margin: 10px auto;
+			/* Metodo 2:  */
+		}
+	</style>
+</head>
+
+<body>
+	<div id="div1">Lorem ipsum dolor div1</div>
+	<p>Lorem ipsum dolor parrafo1</p>
+	<div id="div2">Lorem ipsum dolor div2</div>
+	<p id="parrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, facilis facere voluptates
+		architecto dolorem
+		quos iusto delectus placeat. Amet totam et totam et totam et totam et totam et totam et totam et totam et totam
+		et totam et totam ea ullam aliquam tempora atque! Quidem consequatur praesentium
+		voluptatibus?</p>
+	<span>lorem ipsum</span>
+	<img src="./book.jpg" alt="Libro">
+	<a href="">Enlace</a>
+	<p id="parrafo3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio, facilis facere voluptates
+		architecto dolorem
+		quos iusto delectus placeat. Amet totam ea ullam aliquam tempora atque! Quidem consequatur praesentium
+		voluptatibus?</p>
+	<p>Lorem ipsum dolor parrafo4</p>
+	<img src="./book.jpg" alt="Libro" id="imagen">
+	<p class="parrafosJuntos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur cum quia
+		tempora quasi
+		consequuntur pariatur omnis delectus vel emnis delectus vel emnis delectus vel emnis delectus vel emnis delectus
+		vel emnis delectus vel expedita eius quas incidunt aperiam exercitationem dolorem, aliquam
+		sequi? Numquam, tempore.</p>
+	<p class="parrafosJuntos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur cum quia
+		tempora quasi
+		consequuntur pariatur omnis delectus vel expedita eius quas incidunt aperiam exercitationem dolorem, aliquam
+		sequi? Numquam, tempore.</p>
+	<p class="parrafosJuntos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur cum quia
+		tempora quasi
+		consequuntur pariatur omnis delectus vel expedita eius quas incidunt aperiam exercitationem dolorem, aliquam
+		sequi? Numquam, tempore.</p>
+	<p class="parrafosJuntos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur cum quia
+		tempora quasi
+		consequuntur pariatur omnis delectus vel expedita eius quas incidunt aperiam exercitationem dolorem, aliquam
+		sequi? Numquam, tempore.</p>
+	<p class="parrafosJuntos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur cum quia
+		tempora quasi
+		consequuntur pariatur omnis delectus vel expedita eius quas incidunt aperiam exercitationem dolorem, aliquam
+		sequi? Numquam, tempore.</p>
+	<p class="parrafosJuntos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequatur cum quia
+		tempora quasi
+		consequuntur pariatur omnis delectus vel expedita eius quas incidunt aperiam exercitationem dolorem, aliquam
+		sequi? Numquam, tempore.</p>
+	<div id="centrarDiv"></div>
+</body>
+
+</html>

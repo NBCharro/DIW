@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de espera</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            width: 90%;
+            margin: auto;
+        }
+        .negrita{
+            font-weight: bold;
+        }
+        td{
+            width: 50%;
+        }
+        .ancho{
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="./P4E2FormularioNelson.html">Volver</a></h2>
+    <h1>Lista de espera</h1>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td><label for="nombre" class="negrita">Nombre</label></td>
+                <td><label for="apellidos" class="negrita">Apellidos</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="nombre" id="nombre" placeholder="Nombre" class="ancho"></td>
+                <td><input type="text" name="apellidos" id="apellidos" class="ancho"></td>
+            </tr>
+            <tr>
+                <td><label for="correoElectronico" class="negrita" class="ancho">Email</label></td>
+                <td><label for="telefono" class="negrita">Telefono</label></td>
+            </tr>
+            <tr>
+                <td><input type="email" name="correoElectronico" id="correoElectronico" placeholder="Email"  class="ancho"></td>
+                <td>
+                    <select name="prefijo" id="prefijo">
+                        <option value="spain">España (+34)</option>
+                    </select>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" style="width: 60%;">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="repetiremail" class="negrita">Repetir email</label></td>
+            </tr>
+            <tr>
+                <td><input type="email" name="repetiremail" id="repetiremail" placeholder="Repetir email" class="ancho"></td>
+            </tr>
+            <tr>
+                <td><label for="personas" class="negrita">Personas</label></td>
+                <td><label for="hora" class="negrita">Hora</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="personas" id="personas" placeholder="2" class="ancho"></td>
+                <td><select name="hora" id="hora" class="ancho">
+                    <option value="desayuno">Desayuno</option>
+                    <option value="comida">Comida</option>
+                    <option value="merienda">Merienda</option>
+                    <option value="cena">Cena</option>
+                </select></td>
+            </tr>
+            <tr><td colspan="2">
+                <input type="checkbox" name="condiciones" id="condiciones">
+                <label for="condiciones">Acepto las condiciones de uso, politica de privacidad y aviso legal</label></td>
+            </tr>
+            <tr><td colspan="2">
+                <input type="checkbox" name="tratamiento" id="tratamiento">
+                <label for="tratamiento">Consiento el tratamiento de datos personales</label></td>
+            </tr>
+            <tr><td colspan="2">
+                <input type="checkbox" name="comunicaciones" id="comunicaciones">
+                <label for="comunicaciones">Consiento la recepcion de comunicaciones del restaurante por e-mail y/o SMS con fines comerciales</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Apuntarse" style="width: 100%;"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

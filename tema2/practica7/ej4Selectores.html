@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+    <style>
+        /* a)	Clase intro con fondo gris, letra en blanco y tamaño 18px. */
+        /* .intro {
+            background-color: gray;
+            color: white;
+            font-size: 18px;
+        } */
+        /* b)	Apellido Duck en color rojo y tachado (con la propiedad text-decoration) */
+        /* .intro p>span {
+            color: red;
+            text-decoration: line-through;
+        } */
+        /* c)	Los dos anteriores con un borde de 1px solid blue (Tanto el div, como la palabra Duck) */
+        /* .intro, .intro p>span{
+            border: 1px solid blue;
+        } */
+        /* d)	Los párrafos de un div con el texto en color rojo y 20 px */
+        /* div > p {
+            color: red;
+            font-size: 20px;
+        } */
+        /* e)	Los input que tienen el foco con el fondo del color que tú elijas */
+        /* input:focus{
+            background-color: blueviolet;
+        } */
+        /* f)	Haz que cuando sitúas el ratón sobre un h1 este tenga fondo de un color y la letra de otro. */
+        /* h1:hover {
+            background-color: black;
+            color: yellow;
+        } */
+        /* g)	Los párrafos que van justo a continuación de un elemento ul con tamaño de fuente 40px. */
+        /* ul+p {
+            font-size: 40px;
+        } */
+        /* h)	Las tablas hermanas, aunque no tienen que ser adyacentes, de un elemento ul con border de 10px solid blue.
+        (Prueba después a insertar un párrafo, para que realmente no sean adyacentes y verás como también funciona). */
+        /* ul+table {
+            border: 10px solid blue;
+        } */
+
+        /* i)	El texto que aparece en idioma italiana se muestre en color fucsia */
+        /* [lang|="it"] {
+            color: fuchsia;
+        } */
+        /* j)	Los elementos que tienen el atributo para identificarlos, que se muestren con fondo de un color y texto de otro. */
+        /* *[id] {
+            background-color: red;
+            color: blue;
+        } */
+
+        /* k)	Los elementos que tienen en title la palabra beautiful. Hazlo de dos formas diferentes. */
+        /* [title~='beautiful'] {
+            background-color: red;
+            color: blue;
+        } */
+
+        /* [title*='beautiful'] {
+            background-color: red;
+            color: blue;
+        } */
+
+        /* l)	Elementos cuyo identificador comience por L con un borde de puntos de 2px y el color que quieras. */
+        /* *[id^='L' i] { */
+        /* *[id^='L'] {
+            border: 2px solid red;
+        } */
+
+        /* m)	Párrafos con la clase myquote, tamaño de fuente 20px y Verdana */
+        /* p[class~='myquote' i] {
+            font-size: 20px;
+            font-family: Verdana;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to My Homepage</h1>
+    <div class="intro">
+        <p style="margin-top:4px;">My name is Donald <span id="Lastname">Duck.</span></p>
+        <p id="my-Address">I live in Duckburg</p>
+        <p style="margin-bottom:4px;">I have many friends:</p>
+    </div>
+    <br>
+    <div class="helpUl">
+        <ul id="Listfriends" style="margin-top:0px;margin-bottom:0px;">
+            <li>Goofy</li>
+            <li>Mickey</li>
+            <li>Daisy</li>
+            <li>Pluto</li>
+        </ul>
+    </div>
+    <ul style="display:none;"></ul>
+    <p class="myquote">All my friends are great!
+        <br>But I really like Daisy!!
+    </p>
+    <p lang="it" title="Hello beautiful">Ciao bella</p>
+    <h3>We are all animals!</h3>
+    <p><span><b>My latest discoveries have led me to believe that we are all animals:</b></span></p>
+    <div class="helpTable" style="width:220px;">
+        <ul style="display:none;"></ul>
+        <!-- <div>H) Parrafo para que realmente no sean adyacentes</div> -->
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <th style="background-color:#f1f1f1;">Name</th>
+                <th style="background-color:#f1f1f1;">Type of Animal</th>
+            </tr>
+            <tr>
+                <td style="background-color:#f1f1f1;">Mickey</td>
+                <td style="background-color:#f1f1f1;">Mouse</td>
+            </tr>
+            <tr>
+                <td style="background-color:#f1f1f1;">Goofey</td>
+                <td style="background-color:#f1f1f1;">Dog</td>
+            </tr>
+            <tr>
+                <td style="background-color:#f1f1f1;">Daisy</td>
+                <td style="background-color:#f1f1f1;">Duck</td>
+            </tr>
+            <tr>
+                <td style="background-color:#f1f1f1;">Pluto</td>
+                <td style="background-color:#f1f1f1;">Dog</td>
+            </tr>
+        </table>
+    </div>
+    <div class="noSel newsletter" style="background-color:#99D6FF;border:1px solid #0099FF;padding:10px;">
+        <form>
+            <h4>Subscribe to my newsletter:</h4>
+            <div style="overflow:auto;">
+                <div style="width:100px;float:left;">Name:</div>
+                <div style="width:180px;float:left;"><input type="text" style="width:150px" class="markup" /></div>
+            </div>
+            <div style="overflow:auto;">
+                <div style="width:100px;float:left;">E-mail:</div>
+                <div style="width:180px;float:left;"><input type="email" style="width:150px" class="markup"></div>
+            </div>
+            <!--
+          <div style="width:65px;float:left;">Password:</div><div style="width:180px;float:left;"><input type="password" style="width:150px" name="password" value="password" /></div>
+          <div class="noSel" style="clear:both;"></div>      
+        -->
+            <div class="noSel" style="margin-top:10px;">
+                Female: <input name="rr" type="radio" id="rr1" checked="checked"
+                    style="outline:2px solid transparent" />
+                Male: <input name="rr" type="radio" id="rr2" style="outline:2px solid transparent" />
+                Other: <input name="rr" type="radio" id="rr3" disabled="disabled"
+                    style="outline:2px solid transparent" />
+            </div>
+            <h4>Newscategories:</h4>
+            <div style="overflow:auto;">
+                <div style="width:60px;float:left;">Ducks:</div>
+                <div style="width:20px;float:left;"><input id="cc1" type="checkbox" checked="checked"
+                        style="outline:2px solid transparent" /></div>
+            </div>
+            <div style="overflow:auto;">
+                <div style="width:60px;float:left;">Dogs:</div>
+                <div style="width:20px;float:left;"><input id="cc2" type="checkbox"
+                        style="outline:2px solid transparent" /></div>
+            </div>
+            <div style="overflow:auto;">
+                <div style="width:60px;float:left;">Humans:</div>
+                <div style="width:20px;float:left;"><input id="cc3" type="checkbox"
+                        style="outline:2px solid transparent" /></div>
+            </div>
+            <div class="noSel" style="clear:both;"></div>
+            <p class="noSel">Your lucky number (between 1 and 10): <input type="number" min="1" max="10" value="7"></p>
+            <input class="noSel" type="reset" value="Reset" style="outline:2px solid transparent" />
+            <input class="noSel" type="submit" value="Submit" style="outline:2px solid transparent" />
+            <input class="noSel" type="button" value="Cancel" style="outline:2px solid transparent" />
+            <div style="margin-top:10px;">
+                <div style="width:120px;float:left;text-align:center;">
+                    <h4 style="margin:0px;font-size:14px;">My Favourite:</h4>
+                    <select multiple class="myselect">
+                        <option>Donald</option>
+                        <option selected>Mickey</option>
+                        <option>Goofy</option>
+                    </select>
+                </div>
+                <div style="width:250px;float:left;">
+                    <h4 style="font-size:14px;margin-top:0px;">Upload image:</h4>
+                    <input type="file" />
+                </div>
+                <input type="image" src="imagen/arrow.jpg" style="float:right;border:3px solid" height="50" />
+                <div style="clear:both"></div>
+            </div>
+        </form>
+    </div>
+    <br>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="footerText">Click the CSS Selectors and see the specified element(s) get selected. &copy; <a
+            href="https://www.w3schools.com">w3schools.com</a></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2E6Tablas</title>
+    <style>
+        table,
+        td,
+        th {
+            text-align: center;
+            border-collapse: collapse;
+            border: 5px solid black;
+            border-style: ridge;
+        }
+
+        #titulo {
+            color: rgb(0, 0, 255);
+        }
+
+        tfoot {
+            font-size: 13px;
+        }
+
+        .izquierda {
+            text-align: left;
+        }
+
+        .derecha {
+            text-align: right;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Extremeña de Teléfonos S.A.</h1>
+    <table>
+        <caption>Factura detallada</caption>
+        <tr>
+            <th colspan="5" id="titulo">EXTREMEÑA DE TELEFONOS</th>
+        </tr>
+        <tr>
+            <th colspan="5">Detalle de cuotas</th>
+        </tr>
+        <tr>
+            <th>PERIODO</th>
+            <th>CONCEPTO</th>
+            <th>IMPORTE</th>
+            <th colspan="2">DESCUENTO</th>
+        </tr>
+        <tr>
+            <td rowspan="3">01/05/12 - 01/07/13</td>
+            <td class="izquierda">Servicio de identificacion de llamadas</td>
+            <td>12 €</td>
+            <td colspan="2">0</td>
+        </tr>
+        <tr>
+            <td class="izquierda">Linea individual</td>
+            <td>14 €</td>
+            <td colspan="2">0</td>
+        </tr>
+        <tr>
+            <td class="izquierda">Bono ciudad</td>
+            <td>10 €</td>
+            <td colspan="2">0</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="izquierda">TOTAL:</td>
+            <td colspan="3" class="derecha">36 €</td>
+        </tr>
+        <tr>
+            <th colspan="5">Detalle de consumos</th>
+        </tr>
+        <tr>
+            <th>CONCEPTO</th>
+            <th>LLAMADAS</th>
+            <th>DURACION</th>
+            <th>IMPORTE</th>
+            <th>DESCUENTO</th>
+        </tr>
+        <tr>
+            <td class="izquierda">Llamada internacional</td>
+            <td>23</td>
+            <td>10m 23s</td>
+            <td>13 €</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="izquierda">Llamada metropolitana</td>
+            <td>23</td>
+            <td>10m 23s</td>
+            <td>3,5 €</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="izquierda">TOTAL:</td>
+            <td colspan="3" class="derecha">16,5 €</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="5">Extremeña de Telefonos le informa que puede llamar al numero gratuito 555 para cualquier
+                    duda o ingerencia que tenga de esta factura o de nuestro servicio.</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

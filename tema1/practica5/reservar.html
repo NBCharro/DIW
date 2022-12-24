@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocinandos - Reservar</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 90%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <a href="./index.html"><img src="./imagenes/logo.png" alt="Logo cocinandos"></a>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./fotos.html">Fotos</a></li>
+            <li><a href="./videos.html">Videos</a></li>
+            <li><a href="./cocinanblog.html">Cocinanblog</a></li>
+            <li><a href="./reservar.html">Reservar</a></li>
+            <li><a href="https://www.cocinandos.com/vales-regalo/" target="_blank">Regala Cocinandos</a></li>
+            <li><a href="./documentos/ICE.pdf" target="_blank">ICE</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1>Cocinandos - Reservar</h1>
+        <section>
+            <ul>
+                <li>
+                    Para garantizar su reserva es necesario facilitar una tarjeta de crédito o débito.
+                </li>
+                <li>
+                    Domingos y lunes cerramos por descanso. Para reservas en el día en curso, llame por teléfono.
+                    Recuerde que la reserva es de mesa, pero no de ubicación.
+                </li>
+                <li>
+                    Nuestro sistema le permite consultar disponibilidad y reserva durante los próximos 90 días. Por
+                    favor, no reserve un número de comensales superior al deseado. Si no encuentra el numero de
+                    comensales que busca es porque no hay mesa.
+                </li>
+                <li>
+                    Si vienen niños menores de 8 años, por favor, póngalo en observaciones.
+                </li>
+                <li>
+                    Muchas gracias por su amabilidad y comprensión. Nuestra casa es su casa
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h1>Reservar en el restaurante</h1>
+            <form action="" method="get">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="nombreCompleto">Nombre completo: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="nombreCompleto" id="nombreCompleto" size="30" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="telefono">Telefono: </label>
+                        </td>
+                        <td>
+                            <input type="tel" name="telefono" id="telefono" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="correoElectronico">Correo electronico: </label>
+                        </td>
+                        <td>
+                            <input type="email" name="correoElectronico" id="correoElectronico" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fechaReserva">Fecha de la reserva: </label>
+                        </td>
+                        <td>
+                            <input type="date" name="fechaReserva" id="fechaReserva" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="turno">Turno</label>
+                        </td>
+                        <td>
+                            <select name="turno" id="turno" required>
+                                <option value="turno1">13:00 a 14:00</option>
+                                <option value="turno2">14:00 a 15:00</option>
+                                <option value="turno3">15:00 a 16:00</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="numeroComensales">Número de comensales(máximo 10):</label>
+                        </td>
+                        <td>
+                            <input type="number" name="numeroComensales" id="numeroComensales" min="0" max="10"
+                                value="0" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="radio" name="lugarComer" id="terraza">
+                            <label for="terraza" style="width: auto;">Terraza</label>
+                            <input type="radio" name="lugarComer" id="comedorInterior">
+                            <label for="comedorInterior" style="width: auto;">Comedor Interior</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="colorMantel">Color del mantel: </label>
+                        </td>
+                        <td>
+                            <input type="color" name="colorMantel" id="colorMantel">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="demandasEspeciales" style="width: auto;">Demandas especiales (Alergias, tronas,
+                                personas
+                                con movilidad reducida, menores
+                                de 8 años...)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="demandasEspeciales" id="demandasEspeciales" cols="30" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Enviar" name="enviar">
+                            <input type="reset" value="Limpiar formulario">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <h2>Si no encuentra disponibilidad, apúntese en la lista de espera</h2>
+            <button><a href="./P4E2FormularioNelsonListaEspera.html">Lista de espera</a></button>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">Aviso legal</a></li>
+            <li><a href="">Política de privacidad</a></li>
+            <li><a href="">Terminos y condiciones</a></li>
+            <li><a href="">Politica de cookies</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

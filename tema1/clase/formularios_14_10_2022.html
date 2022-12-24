@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <form action="" method="get" name="formulario1" id="formulario1">
+        <fieldset id="datosPersonales">
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" name="nombre" id="nombre" size="40" minlength="4" maxlength="30"
+                placeholder="Escribe tu nombre" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password"><br>
+            <label for="archivo">Sube tu archivo:</label>
+            <input type="file" name="archivo" id="archivo" autofocus><br>
+            <label for="genero">Genero:</label>
+            <input type="radio" name="genero" id="generoHombre" value="Hombre">
+            <label for="generoHombre">Hombre</label>
+            <input type="radio" name="genero" id="generoMujer" value="Mujer">
+            <label for="generoMujer">Mujer</label>
+            <input type="radio" name="genero" id="generoOtro" value="Otro" checked>
+            <label for="generoOtro">Otro</label><br>
+        </fieldset>
+        <fieldset id="datosDeportes">
+            <legend>Deportes</legend>
+            <label for="deporte">Deportes favoritos:</label>
+            <input type="checkbox" name="deporte1" id="deporte1">
+            <label for="deporte1">Deporte 1</label>
+            <input type="checkbox" name="deporte2" id="deporte2">
+            <label for="deporte2">Deporte 2</label>
+            <input type="checkbox" name="deporte3" id="deporte3" checked>
+            <label for="deporte3">Deporte 3</label>
+            <input type="checkbox" name="deporte4" id="deporte4">
+            <label for="deporte4">Deporte 4</label>
+        </fieldset>
+        <fieldset id="areaTexto">
+            <legend>Comentarios</legend>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="2" placeholder="Escribe tus comentarios"
+                style="width: 99%;"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Geografia</legend>
+            <label for="provincia">Provincia</label>
+            <select name="provincia" id="provincia" size="9">
+                <optgroup label="Castilla y Leon">
+                    <option value="leon">Leon</option>
+                    <option value="burgos">Burgos</option>
+                    <option value="avila">Avila</option>
+                </optgroup>
+                <optgroup label="Otra comunidad">
+                    <option value="madrid">Madrid</option>
+                    <option value="barcelona">Barcelona</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Autocompletar</legend>
+            <label for="actor">Actor:</label>
+            <input type="text" name="actor" id="actor" list="listaActores">
+            <datalist id="listaActores">
+                <option value="Matt Damon"></option>
+                <option value="Brad Pitt"></option>
+                <option value="Denzel Whasington"></option>
+                <option value="Mark Ruffalo"></option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Nuevos</legend>
+            <label for="url">URL: </label>
+            <input type="url" name="url" id="url" value="http://www."><br>
+            <label for="telefono">Telefono: </label>
+            <input type="tel" name="telefono" id="telefono"><br>
+            <label for="color">Color: </label>
+            <input type="color" name="color" id="color"><br>
+            <label for="busqueda">Busqueda: </label>
+            <input type="search" name="busqueda" id="busqueda"><br>
+            <label for="fecha">Fecha: </label>
+            <input type="date" name="fecha" id="fecha"><br>
+            <label for="hora">Hora: </label>
+            <input type="time" name="hora" id="hora"><br>
+            <label for="rango">Rango: </label>
+            <input type="range" name="rango" id="rango" min="0" max="100"><br>
+            <label for="file">Progreso de descarga: </label>
+            <progress id="file" value="32" max="100"> 32% </progress> <br>
+            <input type="hidden" name="DNIoculto" value="11222333G">
+        </fieldset>
+        <fieldset>
+            <legend>Atributos nuevos</legend>
+            <form action="" autocomplete="on">
+                <label for="">Autocompletar: </label>
+                <input type="email" name="" id="" autocomplete="off">
+            </form>
+            <input type="email" name="" id="" autocomplete="on"><br>
+        </fieldset>
+        <br><input type="submit" value="Enviar datos" name="enviar">
+        <input type="reset" value="Borrar datos">
+        <br><input type="image" src="./imagenes/ies.jpg" alt="Logo IES San Andres" width="60px">
+    </form>
+</body>
+
+</html>

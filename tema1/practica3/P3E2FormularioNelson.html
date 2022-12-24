@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3E2Formulario</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <table>
+                <tr>
+                    <td><strong>D.N.I.:</strong></td>
+                    <td><input type="text" name="dni" id="dni" value="11222333X" size="25"></td>
+                    <td><strong>Sexo:</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Nombre:</strong></td>
+                    <td><input type="text" name="nombre" id="nombre" size="50"></td>
+                    <td>
+                        <input type="radio" name="hombre" id="hombre">Hombre
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Apellidos:</strong></td>
+                    <td><input type="text" name="apellidos" id="apellidos" size="100"></td>
+                    <td>
+                        <input type="radio" name="mujer" id="mujer">Mujer
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Direccion</legend>
+            <table>
+                <tr>
+                    <td><strong>Calle/Avda:</strong></td>
+                    <td colspan="3"><input type="text" name="calle" id="calle" size="100"></td>
+                </tr>
+                <tr>
+                    <td><strong>Poblacion:</strong></td>
+                    <td><input type="text" name="" id="" readonly size="70"></td>
+                    <td><strong>Provincia:</strong></td>
+                    <td>
+                        <select name="provincia" id="provincia">
+                            <option value="Almeria">Almeria</option>
+                            <option value="Leon">Leon</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Practica en grupo</legend>
+            <table>
+                <tr>
+                    <td><label for="archivo"><strong>Archivo:</strong></label>
+                        <input type="text" name="descripcionArchivo" id="descripcionArchivo" size="80">
+                        <input type="file" name="archivo" id="archivo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="tipoArchivo" id="tipoArchivo">
+                        <label for="tipoArchivo">Archivo comprimido</label>
+
+                        <input type="checkbox" name="tipoArchivo" id="tipoArchivo">
+                        <label for="tipoArchivo">Archivo encriptado</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Descripcion de la practica</strong></td>
+                </tr>
+                <tr>
+                    <td><textarea name="descripcion" id="descripcion" cols="100" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="submit" value="Submit Query" name="enviar">
+                        <input type="reset" value="Borrar"><br>
+                        <input type="image" src="./imagenes/ies.jpg" alt="Logo IES San Andres" width="40px">
+                    </th>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <!-- P3E2FormularioNelson.html?dni=11222333X&nombre=Jose&hombre=on&apellidos=Perez&calle=Calle+Falsa%2C+1233&provincia=Leon&archivo=&descripcion=Descripcion+de+la+practica+realizada&enviar=Submit+Query -->
+</body>
+
+</html>

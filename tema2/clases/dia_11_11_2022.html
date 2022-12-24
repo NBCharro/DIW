@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 11_11_2022</title>
+    <!-- Selectores de atributos -->
+    <style>
+        /* Todos los enlaces que tienen el atributo class */
+        a[class] {
+            color: black;
+        }
+
+        /* Todos los elementos que tienen el atributo class */
+        [class] {
+            color: black;
+        }
+
+        /* Los elementos de lista que tienen la clase, y solo esa clase*/
+        /* El i final sirve para que no distinga entre mayusculas y minusculas */
+        li[class="a" i] {
+            color: black;
+        }
+
+        /* Los elementos de lista que tienen el color negro, y SOLO el color negro, si tienen backgroun no*/
+        li[class="a"] {
+            color: black;
+        }
+
+        /* Los elementos que en su atributo tiene a o mas cosas separadas por comas*/
+        li[class~="a"] {
+            color: black;
+        }
+
+        /* Este |=, se suele usar para lang, y elige el VALOR o el VALOR- con o sin guion y en
+        mayusculas y minusculas. Elige: es es- ES ES-*/
+        p[lang|="es"] {
+            color: red;
+        }
+
+        /* Atributos que comienzan por http: */
+        [href^="http:"] {
+            color: green;
+        }
+
+        /* Atributos que acaban en pdf */
+        a[href$="pdf"] {
+            font-size: 50%;
+        }
+
+        /* Atributos que contienen n en cualquier sitio */
+        [class*="n"] {
+            display: none;
+        }
+    </style>
+    <!-- PSEUDOCLASES -->
+    <style>
+        /* Reiniciamos estilos */
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* El orden seria LoVeHAte: link,visited,hover,active para no pisarse */
+        a:link {
+            color: violet;
+        }
+
+        a:visited {
+            color: darkorange;
+        }
+
+        li:hover {
+            color: white;
+            background-color: red;
+        }
+
+        /* Cuando el p es target del a del h3, adquiere estos cambios */
+        p:target {
+            background-color: red;
+            color: white;
+        }
+
+        /*  */
+    </style>
+</head>
+
+<body>
+    <h1>Selectores de atributo</h1>
+    <h2>Lista con atributo clase</h2>
+    <h3><a href="#texto">Ir al texto</a></h3>
+    <ul>
+        <li>Item 1</li>
+        <li class="a">Item 2</li>
+        <li class="a b">Item 3</li>
+        <li class="ab">Item 4</li>
+        <li class="name">Item 5</li>
+        <li class="Name">Item 5.5</li>
+        <li class="identify">Item 6</li>
+        <li class="A">Item 7</li>
+    </ul>
+
+
+    <h2>Enlaces</h2>
+    <a href="http://educa.jcyl.es">Item 7</a><br>
+    <a href="https://www.w3schools.com/">Item 8</a><br>
+    <a href="documento.pdf">Item 9</a><br>
+
+    <h2>Language</h2>
+    <p lang="en">Hello!</p>
+    <p lang="en-us">Hi!</p>
+    <p lang="en-gb">Ello!</p>
+    <p lang="us">Hi!</p>
+    <p lang="no">Hei!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+</body>
+
+</html>

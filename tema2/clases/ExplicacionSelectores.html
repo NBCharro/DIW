@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de atributo</title>
+    <!-- ATRIBUTOS -->
+    <style>
+        li[class] {
+            font-size: 200%;
+        }
+
+        li[class="a" i] {
+            background-color: yellow;
+        }
+
+        li[class~="a"] {
+            color: red;
+        }
+
+        p[lang|="en"] {
+            color: green;
+        }
+
+        a[href^="http:"] {
+            font-size: 150%;
+        }
+
+        a[href$="pdf"] {
+            font-size: 1.1em;
+        }
+
+        [class*="n"] {
+            display: none;
+        }
+
+        li[class*="a"] {
+            border: 2px dotted blue;
+        }
+    </style>
+    <!-- PSEUDOCLASES -->
+    <style>
+        a {
+            /* Reiniciamos estilos */
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* El orden seria LoVeHAte: Link,Visited,Hover,Active para no pisarse */
+        a:link {
+            color: violet;
+        }
+
+        a:visited {
+            color: darkorange;
+        }
+
+        li:hover {
+            color: white;
+            background-color: red;
+        }
+
+        a:active {
+            background-color: black;
+            color: white;
+        }
+
+        p:target {
+            background-color: darkorange;
+            color: white;
+            font-size: 110%;
+        }
+
+        p:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selectores de atributo</h1>
+    <h2>Lista con atributo clase</h2>
+    <h3><a href="#texto">Ir al texto</a></h3>
+    <ul>
+        <li>Item 1</li>
+        <li class="a">Item 2</li>
+        <li class="a b">Item 3</li>
+        <li class="ab">Item 4</li>
+        <li class="name">Item 5</li>
+        <li class="Name">Item 5.5</li>
+        <li class="identify">Item 6</li>
+        <li class="A">Item 6.5</li>
+    </ul>
+    <h2>Enlaces</h2>
+    <a href="http://educa.jcyl.es" target="_blank">Item 7</a><br>
+    <a href="https://www.w3schools.com/" target="_blank">Item 8</a><br>
+    <a href="documento.pdf" target="_blank">Item 9</a><br>
+    <h2>Language</h2>
+    <p lang="EN">Hello!</p>
+    <p lang="en-us">Hi!</p>
+    <p lang="en-gb">Ello!</p>
+    <p lang="us">Hi!</p>
+    <p lang="no">Hei!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia id quis aliquam minus. Labore vitae
+        tempora debitis molestiae nam ullam voluptas praesentium exercitationem, delectus eveniet distinctio culpa,
+        excepturi officia modi.
+        Ab sint laudantium necessitatibus ad quam mollitia, rem rerum. Cumque, ea at autem aspernatur sint laudantium
+        hic et modi voluptas? Impedit sunt ratione dolore enim sequi incidunt repudiandae cum sed.
+        Sint quas exercitationem repudiandae atque rem sunt necessitatibus officiis nostrum fuga cumque dolor eligendi
+        dolore illo, perferendis voluptatem ut distinctio, incidunt, voluptates modi dignissimos voluptate quo
+        praesentium. Accusantium, labore rerum?
+        Quam natus dignissimos facere libero iste delectus animi, illo ea esse ab, modi aspernatur voluptatibus.
+        Reprehenderit, quam? Nesciunt quasi, repellat architecto placeat est voluptatibus pariatur officiis quidem ea at
+        molestiae?</p>
+</body>
+
+</html>

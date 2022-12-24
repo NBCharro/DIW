@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba de HTML5</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get" autocomplete="off">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" name="nombre" id="nombre" maxlength="80" size="30" autofocus
+                placeholder="Escribe tu nombre y apellidos" required><br>
+            <label for="documentoIdentidad">Documento de identidad</label>
+            <select name="documentoIdentidad" id="documentoIdentidad">
+                <option value="dni">DNI</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
+            <input type="text" name="numeroDocumento" id="numeroDocumento" minlength="9" maxlength="9"  size="15" required><br>
+            <label for="correo">Email: </label>
+            <input type="email" name="correo" id="correo" size="30"><br>
+            <label for="telefono">Telefono</label>
+            <input type="tel" name="telefono" id="telefono"  size="30" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Datos del vuelo</legend>
+            <label for="aeropuertoOrigen">Aeropuerto de origen</label>
+            <select name="aeropuertoOrigen" id="aeropuertoOrigen" required>
+                <optgroup label="España">
+                    <option value="madrid">Madrid</option>
+                    <option value="leon">Leon</option>
+                    <option value="avila">Avila</option>
+                </optgroup>
+                <optgroup label="Portugal">
+                    <option value="lisboa">Lisboa</option>
+                    <option value="oporto">Oporto</option>
+                </optgroup>
+                <optgroup label="Gran Bretaña">
+                    <option value="londres">Londres</option>
+                    <option value="liverpool">Liverpool</option>
+                </optgroup>
+            </select> <br>
+            <label for="aeropuertoDestino">Aeropuerto de destino</label>
+            <input type="text" name="aeropuertoDestino" id="aeropuertoDestino" list="aeropuertos" size="30" required>
+            <datalist id="aeropuertos">
+                <option value="Madrid"></option>
+                <option value="Leon"></option>
+                <option value="Avila"></option>
+                <option value="Lisboa"></option>
+                <option value="Oporto"></option>
+                <option value="Londres"></option>
+                <option value="Liverpool"></option>
+                <option value="Berlin"></option>
+            </datalist><br>
+            <label for="busqueda">Término de búsqueda: </label>
+            <input type="search" name="busqueda" id="busqueda" size="30"><br>
+            <label for="fechaPerdida">Fecha en la que se produjo la pérdida</label>
+            <input type="date" name="fechaPerdida" id="fechaPerdida"><br>
+            <label for="horaPerdida">Hora en que se produjo la pérdida</label>
+            <input type="time" name="horaPerdida" id="horaPerdida"><br>
+            <label for="fechaReclamacion">Fecha y hora en que se puso la reclamación</label>
+            <input type="datetime-local" name="fechaReclamacion" id="fechaReclamacion"><br>
+            <label for="numeroViajeros">Numero de viajeros</label>
+            <input type="number" name="numeroViajeros" id="numeroViajeros" max="8" min="0" value="0" size="30"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Datos del objeto perdido</legend>
+            <label for="descripcionObjeto">Descripcion del objeto perdido:</label><br>
+            <textarea name="descripcionObjeto" id="descripcionObjeto" cols="80" rows="5"></textarea><br>
+            <label for="colorObjeto">Color del objeto</label>
+            <input type="color" name="colorObjeto" id="colorObjeto"><br>
+            <label for="fotoObjeto">Fotografia del objeto</label>
+            <input type="file" name="fotoObjeto" id="fotoObjeto" accept=".jpg"><br>
+        </fieldset>
+        <input type="checkbox" name="recibirNotificaciones" id="recibirNotificaciones" checked>
+        <label for="recibirNotificaciones" style="width: auto;">Recibir notificaciones de la compañía con información sobre vuelos y
+            ofertas</label><br>
+        <input type="submit" value="Enviar" name="enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+</body>
+
+</html>

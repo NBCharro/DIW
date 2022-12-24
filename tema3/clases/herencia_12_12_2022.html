@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia 12_12_2022</title>
+    <style>
+        /* No se heredan todas las propiedades, ejemplo el fondo no. */
+        /* Podemos forzar o no la herencia con inherit, unset, initial */
+        .caja1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .caja2 {
+            width: 50%;
+            height: 50%;
+            background-color: black;
+            /* INHERIT: Con el inherit hereda el background-color de caja1 */
+            background-color: inherit;
+        }
+
+        .parrafo1 {
+            color: red;
+        }
+
+        .parrafo1 em:nth-of-type(1) {
+            /* INITIAL: usa el valor de la hoja de estilos del navegador */
+            color: initial;
+        }
+
+        /* UNSET: si es heredable lo hereda y si no pues funciona como initial */
+        p {
+            color: red;
+        }
+
+        .azul {
+            color: blue;
+        }
+
+        .verde {
+            color: green;
+        }
+
+        .verde p {
+            /* Todos los parrafos serian rojos pero forzamos el parrafo para que herede el color de la clase padre */
+            color: unset;
+            /* Como es heredable seria igual que poner color: inherit; */
+        }
+
+        #herenciaUnset1 {
+            /* Como es no es heredable seria igual que poner color: initial; */
+            color: initial;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja1">
+        <div class="caja2"></div>
+    </div>
+    <p class="parrafo1">Lorem ipsum dolor, sit amet consectetur <em>ENFATIZADO</em> adipisicing elit. Ex laboriosam
+        reprehenderit,
+        voluptatem aliquam eveniet
+        adipisci harum <em>ENFATIZADO</em> quas nobis officiis earum in quibusdam nulla laborum rerum culpa. Ab sint at
+        praesentium
+    </p>
+    <div id="divUnset1">
+        <p id="herenciaUnset1">Texto rojo</p>
+    </div>
+    <div id="divUnset2" class="azul">
+        <p id="herenciaUnset2">Texto azul</p>
+    </div>
+    <div id="divUnset3" class="verde">
+        <p id="herenciaUnset3">Texto verde</p>
+    </div>
+</body>
+
+</html>

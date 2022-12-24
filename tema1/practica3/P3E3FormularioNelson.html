@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro - Mi web</title>
+</head>
+
+<body>
+    <h2>Formulario de registro</h2>
+    <form action="" method="get">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" maxlength="50"><br><br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" maxlength="50"><br><br>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" name="sexo" id="hombre">
+        <label for="hombre">Hombre</label>
+        <input type="radio" name="sexo" id="mujer">
+        <label for="mujer">Mujer</label><br><br>
+        <label for="poblacion">Poblacion:</label>
+        <select name="poblacion" id="poblacion">
+            <option value="Alicante">Alicante</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Valencia">Valencia</option>
+        </select><br><br>
+        <label for="correo">Correo:</label>
+        <input type="text" name="correo" id="correo"><br><br>
+        <label for="descripcion">Descripcion:</label>
+        <textarea name="descripcion" id="descripcion" cols="60" rows="5"></textarea><br><br>
+        <input type="checkbox" name="recibirInformacion" id="recibirInformacion" checked>
+        <label for="recibirInformacion">Deseo recibir información sobre novedades y ofertas</label><br><br>
+        <input type="checkbox" name="condiciones" id="condiciones">
+        <label for="condiciones">Declaro haber leído y aceptar las condiciones generales del programa y la normativa
+            sobre protección de datos</label><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

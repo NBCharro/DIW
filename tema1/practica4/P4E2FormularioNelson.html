@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4E2Formulario</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            width: 90%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reservar en el restaurante</h1>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td>
+                    <label for="nombreCompleto">Nombre completo: </label>
+                </td>
+                <td>
+                    <input type="text" name="nombreCompleto" id="nombreCompleto" size="30" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="telefono">Telefono: </label>
+                </td>
+                <td>
+                    <input type="tel" name="telefono" id="telefono" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="correoElectronico">Correo electronico: </label>
+                </td>
+                <td>
+                    <input type="email" name="correoElectronico" id="correoElectronico" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fechaReserva">Fecha de la reserva: </label>
+                </td>
+                <td>
+                    <input type="date" name="fechaReserva" id="fechaReserva" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="turno">Turno</label>
+                </td>
+                <td>
+                    <select name="turno" id="turno" required>
+                        <option value="turno1">13:00 a 14:00</option>
+                        <option value="turno2">14:00 a 15:00</option>
+                        <option value="turno3">15:00 a 16:00</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="numeroComensales">Número de comensales(máximo 10):</label>
+                </td>
+                <td>
+                    <input type="number" name="numeroComensales" id="numeroComensales" min="0" max="10" value="0"
+                        size="30">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="radio" name="lugarComer" id="terraza">
+                    <label for="terraza" style="width: auto;">Terraza</label>
+                    <input type="radio" name="lugarComer" id="comedorInterior">
+                    <label for="comedorInterior" style="width: auto;">Comedor Interior</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="colorMantel">Color del mantel: </label>
+                </td>
+                <td>
+                    <input type="color" name="colorMantel" id="colorMantel">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="demandasEspeciales" style="width: auto;">Demandas especiales (Alergias, tronas, personas
+                        con movilidad reducida, menores
+                        de 8 años...)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="demandasEspeciales" id="demandasEspeciales" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Enviar" name="enviar">
+                    <input type="reset" value="Limpiar formulario">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h2>Si no encuentra disponibilidad, apúntese en la lista de espera</h2>
+    <button><a href="./P4E2FormularioNelsonListaEspera.html">Lista de espera</a></button>
+</body>
+
+</html>

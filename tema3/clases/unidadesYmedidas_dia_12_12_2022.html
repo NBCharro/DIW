@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades y medidas Dia 12_12_2022</title>
+    <style>
+        /* Unidades absolutas(su tamño no varia): cm, mm, in, pt, pc */
+        /* No se usan mucho */
+        /* Unidades relativas(dependen de otro valor): em, vw, vh */
+        body {
+            font-size: 16px;
+        }
+
+        h1 {
+            /* EM: relativo al tamaño de la font-size elegida del padre. 3*16px=48px */
+            font-size: 3em;
+            /* REM: igual que em pero toma la font-size del elemento raiz. */
+            font-size: 3rem;
+            /* VH: view height es el porcentaje de la altura de la ventana que vemos.(ver .caja3) */
+            /* PX: Es mejor evitar usarlas, por el responsive design. */
+            /* %: Hace refencia al elemento padre (ver .caja2) */
+            /* Las unidades relativas se pueden calcular con calc(RELAT - ABSOL) */
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        div {
+            /* EM: Si enlazamos varios divs toma el tamaño relativo del padre, en este caso ((16px*0.8)*0.8)*0.8 */
+            font-size: 0.8em;
+            /* REM: como toma la font-size de la raiz no cambia el tamaño de los hijos. */
+            font-size: 0.8rem;
+        }
+
+        .caja {
+            /* EM y REM se pueden usar para width y height */
+            width: 20em;
+            height: 40em;
+            background-color: aqua;
+        }
+
+        .caja2 {
+            width: 50%;
+            height: 25%;
+            background-color: blue;
+        }
+
+        .caja4 {
+            width: calc(50% - 20px);
+            height: 25%;
+            background-color: blue;
+        }
+
+        .caja3 {
+            width: 80%;
+            height: 5vh;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidades y medidas</h1>
+    <h2>Lorem ipsum dolor</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At molestias in corrupti nobis, dolore odit consequatur
+        autem, impedit dicta corporis, et tempore itaque temporibus suscipit numquam quo! Consequuntur, ut error.</p>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta omnis natus pariatur deleniti voluptates eum
+        aliquam perspiciatis asperiores ad facilis quia repellendus, quo, repellat neque ipsa nisi veritatis?
+        Dignissimos, velit.
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quibusdam illum perferendis illo commodi
+            hic, nobis minima, fugit vitae architecto est nesciunt ducimus cum aliquam iste in. Amet, nisi fugit!
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum voluptas nisi alias debitis eveniet qui
+                nonquae numquam neque voluptatum officiis earum iure vitae molestias, temporibus quidem corrupti
+                similique aspernatur.
+            </div>
+        </div>
+    </div>
+    <div class="caja">
+        <div class="caja2"></div>
+        <div class="caja4"></div>
+    </div>
+    <div class="caja3"></div>
+</body>
+
+</html>

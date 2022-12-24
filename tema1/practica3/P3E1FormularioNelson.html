@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3E1Formulario</title>
+</head>
+
+<body>
+    <h1>Cuestionario de Cine</h1>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre"><br>
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" name="apellidos"><br>
+            <label for="DNI">DNI:</label><br>
+            <input type="text" name="DNI"><br>
+            <label for="Edad">Edad:</label><br>
+            <input type="text" name="Edad" size="3"><br>
+            <label for="Sexo">Sexo:</label><br>
+            <select name="sexo">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="..." selected>...</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Mejor Pelicula</legend>
+            <input type="radio" name="mejorPelicula" id="centaurosDelDesierto">
+            <label for="centaurosDelDesierto">Centauros del desierto</label><br>
+            <input type="radio" name="mejorPelicula" id="elHombreQueMatoALibertyWallace">
+            <label for="elHombreQueMatoALibertyWallace">El hombre que mato a Liberty Wallace</label><br>
+            <input type="radio" name="mejorPelicula" id="rioRojo">
+            <label for="rioRojo">Rio Rojo</label>
+        </fieldset>
+        <fieldset>
+            <legend>Selecciona las peliculas que hayas visto</legend>
+            <input type="checkbox" name="rioBravo" id="rioBravo">
+            <label for="rioBravo">Rio Bravo</label><br>
+            <input type="checkbox" name="elUltimoTrenAGunHill" id="elUltimoTrenAGunHill">
+            <label for="elUltimoTrenAGunHill">El ultimo tren a GunHill</label><br>
+            <input type="checkbox" name="soloAnteElPeligro" id="soloAnteElPeligro">
+            <label for="soloAnteElPeligro">Solo ante el peligro</label><br>
+            <input type="checkbox" name="misionDeAudaces" id="misionDeAudaces">
+            <label for="misionDeAudaces">Mision de audaces</label><br>
+            <input type="checkbox" name="elSargentoNegro" id="elSargentoNegro">
+            <label for="elSargentoNegro">El sargento negro</label>
+        </fieldset>
+        <fieldset>
+            <legend>Argumento de tu pelicula preferida</legend>
+            <textarea name="argumento" id="argumento" cols="30" rows="10"></textarea>
+        </fieldset>
+        <input type="reset" value="Borrar formulario">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

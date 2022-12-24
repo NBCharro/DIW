@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia_28_10_2022</title>
+</head>
+
+<body>
+    <!-- IMAGENES -->
+    <div>
+        <figure>
+            <img src="https://api.lorem.space/image/book?w=150&h=220" alt="Libro aleatorio" title="Libro aleatorio">
+            <figcaption>Fig 1. Libro aleatorio</figcaption>
+        </figure>
+        <figure>
+            <img src='https://i.postimg.cc/pm1qG9Xc/book.jpg' border='0' alt='book' title="Stormlight Archive" />
+            <figcaption>Fig 2. Archivo de las tormentas</figcaption>
+        </figure>
+    </div>
+    <!-- ETIQUETAS SEMANTICAS -->
+    <div>
+        <audio src="./sonidos/SpaceJazz.mp3" controls autoplay>Texto que aparece si el navegador no soporta la etiqueta
+            audio</audio>
+        <!-- Autoplay solo funciona con muted, por el funcionamiento del navegador  -->
+        <video src="./videos/nature.mp4" controls autoplay muted width="500px">Texto si no soporta video</video>
+        <!-- Autoplay solo funciona con muted, por el funcionamiento del navegador  -->
+    </div>
+    <div>
+        <!-- Para meter una pagina web o pdf usamos IFRAME -->
+        <iframe src="https://www.educa.jcyl.es/es" frameborder="0" width="90%" height="150"></iframe>
+        <iframe src="./pdf/Practica 4_Formularios.pdf" frameborder="0" width="500px" height="300"></iframe>
+        <!-- Para youtube tenemos que darle en compartir, en <>, nos dara un iframe y lo pegamos en la web -->
+        <iframe width="200" height="115" src="https://www.youtube.com/embed/iOxXKMVxfw8" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe src="https://player.twitch.tv/?channel=gorgeousgroove&parent=localhost" frameborder="0"
+            allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    </div>
+</body>
+
+</html>

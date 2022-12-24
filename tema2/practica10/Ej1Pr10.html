@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Practica 10 Ejercicio1</title>
+	<style>
+		a {
+			text-decoration: none;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		#word::before {
+			background-image: url('./documentos/word.png');
+		}
+
+		#excel::before {
+			background-image: url("./documentos/excel.png");
+		}
+
+		#pdf::before {
+			background-image: url("./documentos/pdf.png");
+		}
+
+		#https::before {
+			background-image: url("./documentos/https.png");
+		}
+
+		a::before {
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			content: "";
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li><a href="./documentos/practica10.docx" download="" id="word">Documento .doc</a></li>
+		<li><a href="./documentos/practica10.xlsx" download="" id="excel">Documento .xlsx</a></li>
+		<li><a href="./documentos/practica10.pdf" download="" id="pdf">Documento .pdf</a></li>
+		<li><a href="https://www.w3schools.com/" target="_blank" id="https">Sitio web seguro</a></li>
+	</ul>
+</body>
+
+</html>

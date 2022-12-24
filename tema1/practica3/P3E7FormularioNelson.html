@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3E7Formulario</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        #name {
+            width: 95%;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        .titulo {
+            background-color: rgb(204, 204, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <table>
+            <tr class="titulo">
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="sex" id="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="sex" id="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Eye color</td>
+                <td>
+                    <select name="eyeColor" id="eyeColor">
+                        <option value="green">Green</option>
+                        <option value="brown">Brown</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check all that apply</td>
+                <td>
+                    <input type="checkbox" name="over6Feet" id="over6Feet">
+                    <label for="over6Feet">Over 6 feet tall</label><br>
+                    <input type="checkbox" name="over200Pounds" id="over200Pounds">
+                    <label for="over200Pounds">Over 200 pounds</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Describe your athletic ability:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="athleticAbility" id="athleticAbility" cols="40" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="Enter my information">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
