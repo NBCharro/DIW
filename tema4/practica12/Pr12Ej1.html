@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 12 Ejercicio 1</title>
+    <style>
+        #contenedor1,
+        #contenedor2,
+        #contenedor3,
+        #contenedor4,
+        #contenedor5 {
+            background-color: grey;
+            width: 500px;
+            height: 200px;
+            margin: 20px;
+            position: relative;
+        }
+
+        #contenedor1 .caja1 {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: red;
+        }
+
+        #contenedor1 .caja2 {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: blue;
+        }
+
+        #contenedor1 .caja3 {
+            width: 200px;
+            height: 75px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            background-color: green;
+        }
+
+        #contenedor1 .caja4 {
+            width: 200px;
+            height: 75px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: yellow;
+        }
+
+        #contenedor2 .caja1 {
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            top: 5px;
+            left: 50px;
+            background-color: blue;
+        }
+
+        #contenedor2 .caja2 {
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 25px;
+            background-color: green;
+        }
+
+        #contenedor2 .caja3 {
+            width: 150px;
+            height: 120px;
+            position: absolute;
+            top: 25px;
+            right: 50px;
+            background-color: yellow;
+        }
+
+        #contenedor2 .caja4 {
+            width: 300px;
+            height: 75px;
+            position: absolute;
+            bottom: 25px;
+            left: 75px;
+            background-color: red;
+        }
+
+        #contenedor3 .caja1 {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background-color: green;
+        }
+
+        #contenedor3 .caja2 {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            top: 25px;
+            left: 125px;
+            background-color: yellow;
+        }
+
+        #contenedor3 .caja3 {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            top: 25px;
+            left: 225px;
+            background-color: red;
+        }
+
+        #contenedor3 .caja4 {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            top: 25px;
+            left: 325px;
+            background-color: blue;
+        }
+
+        #contenedor4 .caja1 {
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background-color: yellow;
+        }
+
+        #contenedor4 .caja2 {
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background-color: red;
+        }
+
+        #contenedor4 .caja3 {
+            width: 100px;
+            height: 175px;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            background-color: blue;
+        }
+
+        #contenedor4 .caja4 {
+            width: 100px;
+            height: 175px;
+            position: absolute;
+            top: 10px;
+            left: 325px;
+            background-color: green;
+        }
+
+        #contenedor5 .caja1 {
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background-color: yellow;
+            z-index: 1;
+        }
+
+        #contenedor5 .caja2 {
+            width: 450px;
+            height: 50px;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background-color: red;
+            z-index: 1;
+        }
+
+        #contenedor5 .caja3 {
+            width: 100px;
+            height: 175px;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            background-color: blue;
+            z-index: 0;
+        }
+
+        #contenedor5 .caja4 {
+            width: 100px;
+            height: 175px;
+            position: absolute;
+            top: 10px;
+            left: 325px;
+            background-color: green;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor1">
+        <div class="caja1">1</div>
+        <div class="caja2">2</div>
+        <div class="caja3">3</div>
+        <div class="caja4">4</div>
+    </div>
+    <div id="contenedor2">
+        <div class="caja1">1</div>
+        <div class="caja2">2</div>
+        <div class="caja3">3</div>
+        <div class="caja4">4</div>
+    </div>
+    <div id="contenedor3">
+        <div class="caja1">1</div>
+        <div class="caja2">2</div>
+        <div class="caja3">3</div>
+        <div class="caja4">4</div>
+    </div>
+    <div id="contenedor4">
+        <div class="caja1">1</div>
+        <div class="caja2">2</div>
+        <div class="caja3">3</div>
+        <div class="caja4">4</div>
+    </div>
+    <div id="contenedor5">
+        <div class="caja1">1</div>
+        <div class="caja2">2</div>
+        <div class="caja3">3</div>
+        <div class="caja4">4</div>
+    </div>
+</body>
+
+</html>
