@@ -20,8 +20,17 @@
             color: white;
         }
 
+        h1 {
+            /* El h1 tiene altura para poder calcular facilmente la distancia top de los dos section */
+            height: 40px;
+            line-height: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
         section {
-            position: absolute;
             width: 40%;
             border-right: 1px solid black;
             border-left: 1px solid black;
@@ -29,13 +38,22 @@
         }
 
         section:nth-of-type(1) {
+            position: relative;
+            top: 30px;
             left: 5%;
-            top: 10%;
+            /* margin-bottom: 50px; */
         }
 
         section:nth-of-type(2) {
+            position: absolute;
             right: 5%;
-            top: 10%;
+            top: 70px;
+        }
+
+        h3,
+        p {
+            border-radius: 5px;
+            padding-left: 5px;
         }
 
         h3 {
@@ -47,6 +65,12 @@
         p {
             background-color: white;
         }
+
+        article {
+            position: relative;
+            left: 5%;
+            width: 90%;
+        }
     </style>
 </head>
 
@@ -54,65 +78,92 @@
     <h1>Software libre</h1>
     <section>
         <h2>Escritorio</h2>
-        <h3>7-zip</h3>
-        <p>7-zip es un compresor/descompresor de archivos que maneja los formatos ZIP, RAR, CAB, GZIP, BZIP2 y TAR, así
-            como
-            un formato propio, 7z.
-        </p>
-        <h3>Audacity</h3>
-        <p>Audacity es un editor de audio. Permite reproducir, grabar, editar, mezclar, aplicar efectos, etc.
-        </p>
-        <h3>GIMP</h3>
-        <p>GIMP (GNU Image Manipulation Program) es un programa de retoque fotográfico y composición y edición de
-            imágenes.
-        </p>
-        <h3>Inkscape</h3>
-        <p>Inkscape es un editor de gráficos vectoriales que utiliza el formato SVG y que también importa formatos como
-            Postscript, EPS, JPEG, PNG, y TIFF y exporta en PNG y varios formatos vectoriales.
-        </p>
-        <h3>LibreOffice</h3>
-        <p>LibreOffice es una suite ofimática completa compuesta de procesador de textos, hoja de cálculo,
-            presentaciones,
-            programa de dibujo, base de datos y editor de ecuaciones.
-        </p>
-        <h3>Scribus</h3>
-        <p>Scribus es un programa de maquetación de documentos (en inglés, DeskTop Publishing o DTP).
-        </p>
-        <h3>ShareX</h3>
-        <p>ShareX es un capturador de pantallas o vídeo capaz de capturar el escritorio completo, ventanas o diferentes
-            figuras geométricas (rectángulos, círculos, etc.) y copiarlo al portapapeles, al disco duro o subirlo a
-            sitios de
-            Internet.
-        </p>
-        <h3>Sumatra PDF</h3>
-        <p>Sumatra PDF es un visualizador de documentos PDF minimalista, que permite ver e imprimir los documentos PDF.
-        </p>
-        <h3>VLC media player</h3>
-        <h3>VideoLAN Media Player es un reproductor multimedia que reproduce numerosos formatos de audio y vídeo, así
-            como
-            DVDs, VCDs y varios protocolos de streaming. También puede utilizarse como servidor unicast o multicast en
-            IPv4 o
-            IPv6.
-        </h3>
+        <article>
+            <h3>7-zip</h3>
+            <p>7-zip es un compresor/descompresor de archivos que maneja los formatos ZIP, RAR, CAB, GZIP, BZIP2 y TAR,
+                así como un formato propio, 7z.
+            </p>
+        </article>
+        <article>
+            <h3>Audacity</h3>
+            <p>Audacity es un editor de audio. Permite reproducir, grabar, editar, mezclar, aplicar efectos, etc.
+            </p>
+        </article>
+        <article>
+            <h3>GIMP</h3>
+            <p>GIMP (GNU Image Manipulation Program) es un programa de retoque fotográfico y composición y edición de
+                imágenes.
+            </p>
+        </article>
+        <article>
+            <h3>Inkscape</h3>
+            <p>Inkscape es un editor de gráficos vectoriales que utiliza el formato SVG y que también importa formatos
+                como Postscript, EPS, JPEG, PNG, y TIFF y exporta en PNG y varios formatos vectoriales.
+            </p>
+        </article>
+        <article>
+            <h3>LibreOffice</h3>
+            <p>LibreOffice es una suite ofimática completa compuesta de procesador de textos, hoja de cálculo,
+                presentaciones, programa de dibujo, base de datos y editor de ecuaciones.
+            </p>
+        </article>
+        <article>
+            <h3>Scribus</h3>
+            <p>Scribus es un programa de maquetación de documentos (en inglés, DeskTop Publishing o DTP).
+            </p>
+        </article>
+        <article>
+            <h3>ShareX</h3>
+            <p>ShareX es un capturador de pantallas o vídeo capaz de capturar el escritorio completo, ventanas o
+                diferentes figuras geométricas (rectángulos, círculos, etc.) y copiarlo al portapapeles, al disco duro o
+                subirlo a
+                sitios de Internet.
+            </p>
+        </article>
+        <article>
+            <h3>Sumatra PDF</h3>
+            <p>Sumatra PDF es un visualizador de documentos PDF minimalista, que permite ver e imprimir los documentos
+                PDF.
+            </p>
+        </article>
+        <article>
+            <h3>VLC media player</h3>
+            <p>VideoLAN Media Player es un reproductor multimedia que reproduce numerosos formatos de audio y vídeo, así
+                como DVDs, VCDs y varios protocolos de streaming. También puede utilizarse como servidor unicast o
+                multicast
+                en IPv4 o IPv6.
+            </p>
+        </article>
     </section>
     <section>
         <h2>Internet</h2>
-        <h3>FileZilla</h3>
-        <p>FileZilla es un cliente de FTP.
-        </p>
-        <h3>Firefox</h3>
-        <p>Firefox es un navegador web altamente personalizable y ampliable mediante los cientos de extensiones y temas
-            disponibles.
-        </p>
-        <h3>HTTrack</h3>
-        <p>HTTrack permite descargar sitios webs completos para su consulta offline.
-        </p>
-        <h3>Pidgin</h3>
-        <p>Pidgin es un cliente de mensajería instantánea, compatible con las redes AIM (protocolos Oscar y TOC), ICQ,
-            MSN
-            Messenger, Yahoo, IRC, Jabber, Gadu-Gadu, Zephyr y otras.
-        </p>
-        <h3>Thunderbird</h3>
+        <article>
+            <h3>FileZilla</h3>
+            <p>FileZilla es un cliente de FTP.</p>
+        </article>
+        <article>
+            <h3>Firefox</h3>
+            <p>Firefox es un navegador web altamente personalizable y ampliable mediante los cientos de extensiones y
+                temas disponibles.
+            </p>
+        </article>
+        <article>
+            <h3>HTTrack</h3>
+            <p>HTTrack permite descargar sitios webs completos para su consulta offline.
+            </p>
+        </article>
+        <article>
+            <h3>Pidgin</h3>
+            <p>Pidgin es un cliente de mensajería instantánea, compatible con las redes AIM (protocolos Oscar y TOC),
+                ICQ, MSN Messenger, Yahoo, IRC, Jabber, Gadu-Gadu, Zephyr y otras.
+            </p>
+        </article>
+        <article>
+            <h3>Thunderbird</h3>
+            <p>Thunderbird es un cliente de correo de los creadores de Firefox, incorpora multitud de características
+                avanzadas y, de forma similar a Mozilla Firefox, puede personalizarse mediante tareas y ampliar sus
+                posibilidades mediante extensiones.</p>
+        </article>
     </section>
 </body>
 

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 13 Ejercicio 1</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #dcdcdc;
+        }
+
+        #contenedor {
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            height: 150px;
+            background-color: #f2f2f2;
+            position: relative;
+        }
+
+        header {
+            background-image: url("./images/computer.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 25% 0px;
+        }
+
+        header img {
+            height: 150px;
+            position: relative;
+            left: 5%;
+            top: 0px;
+        }
+
+        header p {
+            position: relative;
+            left: 3%;
+            top: -40px;
+            font-size: 0.8rem;
+        }
+
+        .menu {
+            position: absolute;
+            right: 20px;
+            bottom: 50px;
+        }
+
+        .menu a {
+            background-color: #f5d378;
+            color: #fff;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 3px 3px #000;
+            margin: 5px;
+        }
+
+        .menu a:hover {
+            background-color: #fff;
+            color: #f5d378;
+        }
+
+        header>button {
+            height: 40px;
+            background-color: #f5d378;
+            border-radius: 28px;
+            cursor: pointer;
+            color: #fff;
+            padding: 10px 31px;
+            position: absolute;
+            top: 5px;
+            right: 2%;
+        }
+
+        .busqueda {
+            position: absolute;
+            top: 5px;
+            right: 15%;
+        }
+
+        .busqueda input[type=text] {
+            height: 40px;
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            width: 100%;
+        }
+
+        #main {
+            background-color: #f0ffff;
+        }
+
+        section {
+            width: 70%;
+            position: absolute;
+        }
+
+        article h2 {
+            padding: 30px 0px 0px 20px;
+        }
+
+        article p {
+            padding: 0px 20px;
+        }
+
+        aside {
+            box-sizing: border-box;
+            width: 30%;
+            background-color: #dfe1c1;
+            padding: 30px;
+            position: relative;
+            right: -70%;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            margin: 25px 0px;
+        }
+
+        footer {
+            background-color: #deb887;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <img src="./images/logo.png" alt="Logo del centro" height="60">
+            <p>San Andrés del Rabanedo(León)</p>
+            <div class="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Productos</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+                <a href="#">Sobre nosotros</a>
+            </div>
+            <div class="busqueda">
+                <input type="text" name="search" placeholder="Buscar..">
+            </div>
+            <button>Log-In</button>
+        </header>
+        <div id="main">
+            <section>
+                <article>
+                    <h2>Título de mi artículo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium quasi velit
+                        labore
+                        quia
+                        assumenda nobis. Ratione itaque dolor non sapiente quia veniam, consequatur qui cumque esse!
+                        Corporis,
+                        placeat molestiae.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam expedita ab omnis similique
+                        sunt,
+                        cupiditate optio explicabo ea debitis, magnam est commodi fuga incidunt maiores nesciunt
+                        reiciendis
+                        nulla quisquam nisi.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium quasi velit
+                        labore
+                        quia
+                        assumenda nobis. Ratione itaque dolor non sapiente quia veniam, consequatur qui cumque esse!
+                        Corporis,
+                        placeat molestiae.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam expedita ab omnis similique
+                        sunt,
+                        cupiditate optio explicabo ea debitis, magnam est commodi fuga incidunt maiores nesciunt
+                        reiciendis
+                        nulla quisquam nisi.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium quasi velit
+                        labore
+                        quia
+                        assumenda nobis. Ratione itaque dolor non sapiente quia veniam, consequatur qui cumque esse!
+                        Corporis,
+                        placeat molestiae.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam expedita ab omnis similique
+                        sunt,
+                        cupiditate optio explicabo ea debitis, magnam est commodi fuga incidunt maiores nesciunt
+                        reiciendis
+                        nulla quisquam nisi.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium quasi velit
+                        labore
+                        quia
+                        assumenda nobis. Ratione itaque dolor non sapiente quia veniam, consequatur qui cumque esse!
+                        Corporis,
+                        placeat molestiae.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam expedita ab omnis similique
+                        sunt,
+                        cupiditate optio explicabo ea debitis, magnam est commodi fuga incidunt maiores nesciunt
+                        reiciendis
+                        nulla quisquam nisi.</p>
+                </article>
+            </section>
+            <aside>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores voluptatibus quo excepturi
+                        laboriosam
+                        quis sit adipisci fuga, expedita nihil molestiae sunt temporibus similique ratione ipsam in
+                        perspiciatis, inventore numquam tempora.</li>
+                    <li>Provident optio, harum sequi sunt debitis modi vel voluptate beatae illo incidunt consequuntur
+                        impedit
+                        minus repudiandae! Tempore nemo ratione quibusdam cum minus aliquam maiores! Architecto,
+                        eligendi?
+                        Debitis quia sunt magnam?</li>
+                    <li>Labore unde earum non eius similique eveniet aperiam ipsa ab soluta fuga. Aliquam ipsam illo
+                        voluptatum
+                        inventore? Ipsum veniam aliquid obcaecati? Velit consequuntur repellendus nisi perferendis, iste
+                        quisquam dolor accusamus?</li>
+                    <li>Ipsa, harum odio. Deleniti repellat possimus necessitatibus, quam reprehenderit exercitationem
+                        hic,
+                        repudiandae ullam impedit enim tempora excepturi eligendi tenetur eaque quaerat? Mollitia iusto
+                        doloribus ullam corrupti eaque dolorem est in!</li>
+                    <li>Rerum laudantium deleniti dolores sed debitis sit enim illum voluptate fugiat unde, officia iste
+                        incidunt officiis aspernatur quaerat autem modi sint architecto, nobis pariatur alias laborum
+                        qui.
+                        Vel,
+                        explicabo laudantium!</li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <div>Autor: Webmaster IES San Andrés (León)</div>
+        </footer>
+    </div>
+</body>
+
+</html>
