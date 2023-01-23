@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox</title>
+    <title>Flexbox Padre</title>
     <style>
         /* 
             Flex box: modelo de cajas flexibles.
@@ -21,11 +21,12 @@
             /* En el padre tenemos que el display de los hijos es flex */
             display: flex;
             /* Por defecto nos lo coloca en fila, para colocarlos en columa y sus respectivos reversos */
+            /* flex-direction: row; Por defecto */
             flex-direction: row;
             /* Los hijos seran redimensionados si no entran en el contenedor padre */
             /* Para que los hijos mantengan su width con flex-wrap. 
                 Si se hace muy pequeño, comienza a encoger */
-            /* flex-wrap: nowrap;  */
+            /* flex-wrap: nowrap; Por defecto */
             /* flex-wrap: wrap-reverse; Saltan de abajo hacia arriba*/
             flex-wrap: wrap;
             /* Atajo para flex-direction y flex-wrap */
@@ -39,17 +40,17 @@
             /* justify-content: flex-start; Por defecto */
             /* justify-content: flex-end; A la derecha */
             /* justify-content: center; Centrado */
+            justify-content: center;
             /* justify-content: space-around; Para equiespaciarlos por el eje principal: en los extremos deja la mitad */
             /* justify-content: space-between; Pega a los laterales y luego equiespacia lo del centro */
             /* justify-content: space-evenly; Deja el mismo espacio entre todos */
-            justify-content: center;
         }
 
         .contenedor {
             /* Para alinearlos en el eje secundario */
-            /* align-items: flex-start; Por defecto */
+            /* align-items: flex-start; Por defecto si los hijos tienen alto. */
             /* align-items: flex-end; Abajo del todo */
-            /* align-items: stretch; Los hijos se expanden al conenido del padre del eje secundario */
+            /* align-items: stretch; Por defecto. Los hijos se expanden al contenido en altura del padre del eje secundario si no les ponemos altura a los hijos */
             /* align-items: baseline; Alinea por la linea base del texto. Si la segunda caja tiene texto mucho mas grande */
             /* align-items: center; */
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 14 Ejercicio 2 al 8</title>
+    <style>
+        header {
+            display: flex;
+            background-color: #2a2a2a;
+            color: white;
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            background-color: #f2f2f2;
+            color: #808080;
+            /* Ejercicio 3 */
+            justify-content: center;
+            /* Ejercicio 4 */
+            justify-content: flex-end;
+            /* Ejercicio 5 */
+            justify-content: space-between;
+            /* Ejercicio 6 */
+            justify-content: space-around;
+            /* Ejercicio 7 */
+            justify-content: space-evenly;
+        }
+
+        nav div {
+            padding: 10px;
+            /* Ejercicio 8. No va a ocupar cada uno de ellos el 100% si no que se comprimiran
+            para que quepan los 4 en linea. */
+            /* width: 100%; */
+        }
+
+        nav div:hover {
+            background-color: #808080;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Flexbox-Menú a la izquierda</h1>
+    </header>
+    <nav>
+        <div>Enlace 1</div>
+        <div>Enlace 2</div>
+        <div>Enlace 3</div>
+        <div>Enlace 4</div>
+    </nav>
+</body>
+
+</html>
