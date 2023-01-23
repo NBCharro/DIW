@@ -7,12 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Hijo</title>
     <style>
-        
+        * {
+            margin: 0;
+        }
+
+        .contenedorPadre {
+            display: flex;
+            height: 500px;
+            width: 80%;
+            max-width: 1000px;
+            background-color: aqua;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caja {
+            width: 100px;
+            height: 100px;
+            /* FACTOR DE CRECIMIENTO. Por defecto 0, no crecen, se ajustan al contenido. Sigue creciendo aunque tenga un width definido.
+                Con 1: si tienen espacio para crecer, crecen hasta ocuparlo totalmente.
+                Con distintos valores crecen de forma distinta en cada hijo en la proporcion que le indicamos.
+            */
+            /* flex-grow: 1; */
+            /* FLEX-BASIS. El valor final de flex-grow lo calcula partiendo de 0. */
+            flex-basis: 0;
+        }
+
+        .caja1 {
+            background-color: red;
+            flex-grow: 3;
+        }
+
+        .caja2 {
+            background-color: green;
+            /* ALIGN-SELF cambia el orden de un elemento del eje secundario. */
+            /* align-self: flex-start; */
+            /* align-self: flex-end; */
+            flex-grow: 2;
+        }
+
+        .caja3 {
+            background-color: yellow;
+            flex-grow: 4;
+        }
+
+        .caja4 {
+            background-color: blue;
+            /* ORDER. Por defecto es 0. Cuando menor sea el orden mas al principio ira y viceversa.
+                Es absoluto, es decir, el -1 va al principio del todo, no es que pierda 1 posicion. */
+            /* order: -1; */
+            flex-grow: 1;
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="contenedorPadre">
+        <div class="caja caja1">1</div>
+        <div class="caja caja2">2</div>
+        <div class="caja caja3">3</div>
+        <div class="caja caja4">4</div>
+    </div>
 </body>
 
 </html>
