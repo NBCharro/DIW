@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Padre</title>
+    <style>
+        /* 
+            Flex box: modelo de cajas flexibles.
+            Originalmente era para colocarlos en una division: horizontal o vertical.
+            Ahora se puede maquetar matricialmente.
+            Las cajas tienen que estar SIEMPRE dentro de un contenedor
+        */
+
+        .contenedor {
+            background-color: aquamarine;
+            width: 70%;
+            max-width: 1000px;
+            /* En el padre tenemos que el display de los hijos es flex */
+            display: flex;
+            /* Por defecto nos lo coloca en fila, para colocarlos en columa y sus respectivos reversos */
+            /* flex-direction: row; Por defecto */
+            flex-direction: row;
+            /* Los hijos seran redimensionados si no entran en el contenedor padre */
+            /* Para que los hijos mantengan su width con flex-wrap. 
+                Si se hace muy pequeño, comienza a encoger */
+            /* flex-wrap: nowrap; Por defecto */
+            /* flex-wrap: wrap-reverse; Saltan de abajo hacia arriba*/
+            flex-wrap: wrap;
+            /* Atajo para flex-direction y flex-wrap */
+            flex-flow: row wrap;
+        }
+
+        .contenedor {
+            /* Solo caja 5, caja 6 y caja 7, lo otro comentado */
+            height: 500px;
+            /* Alinear en el eje principal, dependiendo si ajustamos por fila o columna*/
+            /* justify-content: flex-start; Por defecto */
+            /* justify-content: flex-end; A la derecha */
+            /* justify-content: center; Centrado */
+            justify-content: center;
+            /* justify-content: space-around; Para equiespaciarlos por el eje principal: en los extremos deja la mitad */
+            /* justify-content: space-between; Pega a los laterales y luego equiespacia lo del centro */
+            /* justify-content: space-evenly; Deja el mismo espacio entre todos */
+        }
+
+        .contenedor {
+            /* Para alinearlos en el eje secundario */
+            /* align-items: flex-start; Por defecto si los hijos tienen alto. */
+            /* align-items: flex-end; Abajo del todo */
+            /* align-items: stretch; Por defecto. Los hijos se expanden al contenido en altura del padre del eje secundario si no les ponemos altura a los hijos */
+            /* align-items: baseline; Alinea por la linea base del texto. Si la segunda caja tiene texto mucho mas grande */
+            /* align-items: center; */
+
+            /* Si tenemos varios items usamos align content en el eje secundario */
+            /* align-content: flex-start; Alinea por defecto */
+            /* align-content: flex-end; Alinea por abajo */
+            align-content: center;
+            /* align-content: space-around; Misma logica */
+            /* align-content: space-between; Misma logica */
+            /* align-content: space-evenly; Misma logica */
+        }
+
+        .caja {
+            height: 200px;
+            width: 200px;
+            /* Solo caja 5, caja 6 y caja 7, lo otro comentado */
+            height: 100px;
+            width: 100px;
+
+            background-color: blueviolet;
+            margin: 10px;
+            font-size: 3rem;
+            color: wheat;
+        }
+
+        .baselinex4 {
+            /* align-items: baseline; Alinea por la linea base del texto. Si la segunda caja tiene texto mucho mas grande */
+            font-size: 6rem;
+        }
+
+        .c1 {
+            width: 100%;
+        }
+
+        .c2 {
+            width: calc(65% - 20px);
+        }
+
+        .c3 {
+            width: calc(35% - 20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- <div class="caja c1">1</div>
+        <div class="caja c2">2</div>
+        <div class="caja c3">3</div>
+        <div class="caja c1">4</div> -->
+        <div class="caja">5</div>
+        <div class="caja baselinex4">6</div>
+        <div class="caja">7</div>
+        <div class="caja">8</div>
+        <div class="caja">7</div>
+        <div class="caja">8</div>
+        <div class="caja">7</div>
+    </div>
+</body>
+
+</html>
