@@ -7,35 +7,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 13 Ejercicio 5</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            position: fixed;
+            width: 100%;
+        }
+
+        header h1 {
+            background-color: #f99f3d;
+            color: white;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        header .menu {
+            background-color: #d17b26;
+            position: relative;
+            padding: 5px;
+        }
+
+        header .menu p:nth-of-type(2) {
+            position: absolute;
+            top: 5px;
+            right: 25px;
+        }
+
+        /*  */
+        main {
+            position: relative;
+            top: 100px;
+        }
+
+        /* COLUMNA IZQUIERDA */
+        #columnaIzquierda {
+            width: 50%;
+            height: 500px;
+        }
+
+        #articuloPrincipal {
+            background-color: #f48000;
+            position: relative;
+            margin: 10px;
+            padding: 15px;
+            height: 175px;
+        }
+
+        #articuloPrincipal .gris {
+            background-color: #dddddc;
+            width: 35px;
+            height: 35px;
+        }
+
+        #articuloPrincipal .gris:nth-of-type(1) {
+            position: absolute;
+            top: 125px;
+            left: 25px;
+        }
+
+        #articuloPrincipal .gris:nth-of-type(2) {
+            position: absolute;
+            top: 125px;
+            left: 150px;
+        }
+
+        #articuloPrincipal p:nth-of-type(2) {
+            position: absolute;
+            top: 125px;
+            left: 75px;
+            width: 50px;
+        }
+
+        #articuloPrincipal p:nth-of-type(3) {
+            position: absolute;
+            top: 125px;
+            left: 200px;
+            width: 50px;
+        }
+
+        #listaDeEnlacesAArticulos {
+            background-color: #bb6033;
+        }
+
+        #listaDeEnlacesAArticulos>div {
+            background-color: #dddddc;
+        }
+
+        #listaDeEnlacesAArticulos .grisOscuro {
+            background-color: gray;
+            width: 25px;
+            height: 25px;
+        }
+
+        /* COLUMNA DERECHA */
+        #columnaDerecha {
+            width: 50%;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #cuadroDeBusqueda {
+            background-color: #f48000;
+        }
+
+        #fotoYPieDeFoto {
+            background-color: #f48000;
+        }
+
+        #publicidad div {
+            background-color: #e7c19b;
+        }
+
+        footer {
+            background-color: #f48000;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Titulo de la pagina</h1>
-        <nav>
-            <ul>
-                <li>Enlace 1</li>
-                <li>Enlace 2</li>
-                <li>Enlace 3</li>
-            </ul>
+        <div class="menu">
+            <p>Enlace 1 | Enlace 2 | Enlace 3</p>
             <p>Login</p>
-        </nav>
+        </div>
     </header>
     <main>
         <div id="columnaIzquierda">
-            <div id="articuloPrincipal"></div>
-            <div id="listaDeEnlacesAArticulos"></div>
+            <div id="articuloPrincipal">
+                <h3>Articulo principal</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt cum adipisci aperiam nam eos
+                    pariatur quae totam.</p>
+                <div class="gris"></div>
+                <p>lorem ipsum</p>
+                <div class="gris"></div>
+                <p>lorem ipsum</p>
+            </div>
+            <div id="listaDeEnlacesAArticulos">
+                <h3>Lista de enlaces a articulos</h3>
+                <div>
+                    <div class="grisOscuro"></div>
+                    <div>
+                        <h4>Titulo articulo</h4>
+                        <p>Aqui es donde iria el resumen del articulo.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="grisOscuro"></div>
+                    <div>
+                        <h4>Titulo articulo</h4>
+                        <p>Aqui es donde iria el resumen del articulo.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="grisOscuro"></div>
+                    <div>
+                        <h4>Titulo articulo</h4>
+                        <p>Aqui es donde iria el resumen del articulo.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="columnaDerecha">
-            <div id="cuadroDeBusqueda"></div>
-            <div id="fotoYPieDeFoto"></div>
-        </div>
-        <div id="publicidad">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="cuadroDeBusqueda">Cuadro de busqueda</div>
+            <div id="fotoYPieDeFoto">
+                <div class="gris">
+                    <div>FOTO</div>
+                </div>
+                <p>Esto es el pie de foto</p>
+            </div>
+            <div id="publicidad">
+                <div>Publicidad</div>
+                <div>Publicidad</div>
+                <div>Publicidad</div>
+            </div>
         </div>
     </main>
     <footer>
