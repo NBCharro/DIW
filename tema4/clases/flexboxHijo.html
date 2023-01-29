@@ -29,13 +29,47 @@
                 Con distintos valores crecen de forma distinta en cada hijo en la proporcion que le indicamos.
             */
             /* flex-grow: 1; */
-            /* FLEX-BASIS. El valor final de flex-grow lo calcula partiendo de 0. */
-            flex-basis: 0;
+            /* FLEX-BASIS. El valor final de flex-grow lo calcula partiendo de 0 */
+            /* flex-basis: auto; Selecciona el width o el height dependiendo del eje principal */
+            /* flex-basis: 0; Los hijos parten de width/height = 0px y rellenan el espacio */
+            /* flex-basis: 100px; igual a width/height = 100px */
+            /* flex-basis: 223px; igual a width/height = 223px */
+            /* flex-basis: 0; */
+            /* FLEX-SHRINK determina si los hijos se encojen. Si no tiene ancho inicial no sabe cuanto comprimirse. */
+            /* Si le ponemos flex-shrink a dos hijos, con valores distintos a 0, cuanto mas alto el numero, mas rapido se encojera con respecto al otro. */
+            /* hijo2 = 1; hijo3 = 2; El hijo3 encoje el doble de rapido que el hijo2 */
+            /* flex-shrink: 1; Por defecto. Se encoje. */
+            /* flex-shrink: 0; No se encoje. */
+        }
+
+        .caja {
+            /* FLEX: Atajo para GROW, SHRINK y BASIS */
+            flex: 1 1 0;
+            /* 0 0 auto */
+            flex: none;
+            /* Un valor, número sin unidades: flex-grow */
+            flex: 2;
+            /* Un valor, width/height: flex-basis */
+            flex: 10em;
+            flex: 30px;
+            flex: auto;
+            flex: content;
+            /* Dos valores: flex-grow | flex-basis */
+            flex: 1 30px;
+            /* Dos valores: flex-grow | flex-shrink */
+            flex: 2 2;
+            /* Tres valores: flex-grow | flex-shrink | flex-basis */
+            flex: 2 2 10%;
+            /* Valores globales */
+            flex: inherit;
+            flex: initial;
+            flex: unset;
         }
 
         .caja1 {
             background-color: red;
-            flex-grow: 3;
+            /* flex-grow: 3; */
+            /* flex-shrink: 0; */
         }
 
         .caja2 {
@@ -43,12 +77,14 @@
             /* ALIGN-SELF cambia el orden de un elemento del eje secundario. */
             /* align-self: flex-start; */
             /* align-self: flex-end; */
-            flex-grow: 2;
+            /* flex-grow: 2; */
+            /* flex-shrink: 1; */
         }
 
         .caja3 {
             background-color: yellow;
-            flex-grow: 4;
+            /* flex-grow: 4; */
+            /* flex-shrink: 2; */
         }
 
         .caja4 {
@@ -56,7 +92,7 @@
             /* ORDER. Por defecto es 0. Cuando menor sea el orden mas al principio ira y viceversa.
                 Es absoluto, es decir, el -1 va al principio del todo, no es que pierda 1 posicion. */
             /* order: -1; */
-            flex-grow: 1;
+            /* flex-grow: 1; */
         }
     </style>
 </head>
