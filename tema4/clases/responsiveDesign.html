@@ -4,15 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Para que el navegador sepa las dimensiones de la ventana -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Design</title>
     <style>
-        
+        .caja {
+            height: 100px;
+            background-color: darksalmon;
+        }
+
+        /* @media screen and (caracteristica a evaluar)  Es como un condicional */
+        @media screen and (max-width:480px) {
+            .caja {
+                background-color: green;
+            }
+        }
+
+        /* Si ponemos solo min tenemos que poner los pixeles de menos a mas. */
+        /* Si ponemos solo min tenemos que ponerlos de mas a menos. */
+        /* @media screen and (min-width:480px) {
+            .caja {
+                background-color: blueviolet;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .caja {
+                background-color: aqua;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .caja {
+                background-color: darkorange;
+            }
+        } */
+
+        /* La coma es un valor OR */
+        /* @media screen and (min-width:480px) , (max-width:768px) {} */
+        /* NOT */
+        /* @media not screen and (min-width:480px) , (max-width:768px) {} */
+
+        /* Si acotamos las resoluciones pueden ir en cualquier orden */
+        /* @media screen and (min-width:480px) and (max-width:768px) {
+            .caja {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1024px) {
+            .caja {
+                background-color: aqua;
+                font-size: 4em;
+            }
+        }
+
+        @media screen and (min-width:1024px) and (max-width:1200px) {
+            .caja {
+                background-color: blueviolet;
+                height: 250px;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .caja {
+                background-color: darkorange;
+            }
+        } */
+
+        /* ORIENTACION. Landscape y portrait */
+        .caja2 {
+            background-color: purple;
+            height: 100px;
+        }
+
+        @media screen and (orientation:landscape) {
+            .caja2 {
+                background-color: darkorange;
+            }
+        }
+
+        /* RELACION DE ASPECTO 16/9 4/3 */
+        @media screen and (aspect-ratio: 4/3) {
+            .caja2 {
+                font-size: 4em;
+            }
+        }
+
+        /* COLOR Si el dispositivo soporta el color */
+        @media screen and (color) {
+            .caja2 {
+                color: wheat;
+            }
+        }
+
+        /* POINTER para saber si es un dispositivo movil. hover o fine=raton ; coarse=movil */
+        /* @media screen and (pointer: fine) { */
+        /* @media screen and (pointer: coarse) { */
+        @media screen and (hover) {
+            .caja2 {
+                font-size: 2em;
+            }
+        }
+
+        /* SUPPORT lo que soporta el medio. No se usa demasiado */
+        /* @supports (color: red){} */
     </style>
 </head>
 
 <body>
-
+    <div class="caja">
+        Caja
+    </div>
+    <div class="caja2">
+        Caja
+    </div>
 </body>
 
 </html>

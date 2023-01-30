@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+.contenedor {
+    font-family: Arial;
+    background-color: #ccc;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    /* Practica 14 Ejercicio 11 */
+    display: flex;
+    flex-flow: row wrap;
+}
+
+article {
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #30323d;
+    color: #f2f2f2;
+    width: 100%;
+}
+
+.main {
+    width: 70%;
+    /* width: 700px; */
+    /* float: left; */
+}
+
+aside {
+    width: 30%;
+    /* width: 300px; */
+    /* float: right; */
+    background-color: #e8c547;
+}
+
+footer {
+    /* clear: both; */
+    color: #f2f2f2;
+    background-color: #4d5061;
+    width: 100%;
+}
+
+.contenedor h2,
+.contenedor h1,
+.contenedor p,
+.contenedor h3 {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+
+/* Media Query */
+/* @media all/screen/print {} */
+@media print {
+    * {
+        background-color: white;
+        color: black;
+    }
+
+    aside,
+    footer {
+        display: none;
+    }
+}
