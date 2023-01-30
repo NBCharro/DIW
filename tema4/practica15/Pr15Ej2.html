@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 15 Ejercicio 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin: 0.5%;
+            color: #999999;
+        }
+
+        body {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: #999999;
+        }
+
+        header,
+        footer {
+            background-color: #ffeebb;
+            width: 100%;
+            height: 100px;
+        }
+
+        nav,
+        aside {
+            background-color: #ccccff;
+            width: 19%;
+            height: 400px;
+        }
+
+        article {
+            background-color: #dddd88;
+            width: 59%;
+            height: 400px;
+        }
+
+        header,
+        footer,
+        nav,
+        aside,
+        article {
+            padding: 5px;
+        }
+
+        @media screen and (max-width:640px) {
+            body {
+                flex-flow: column nowrap;
+            }
+
+            header,
+            footer {
+                background-color: #ffeebb;
+                width: 99%;
+                height: 100px;
+            }
+
+            nav,
+            aside {
+                background-color: #ccccff;
+                width: 99%;
+                height: 100px;
+            }
+
+            article {
+                background-color: #dddd88;
+                width: 99%;
+                height: 400px;
+                order: -1;
+            }
+
+            header {
+                order: -2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <article>article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+</body>
+
+</html>
