@@ -6,36 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 13 Ejercicio 5</title>
+    <link rel="stylesheet" href="./CSSCodigoEj5/header.css">
+    <link rel="stylesheet" href="./CSSCodigoEj5/ColumIzqArticuloPrincipal.css">
+    <link rel="stylesheet" href="./CSSCodigoEj5/ColumIzqListaEnlaces.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-        }
-
-        header h1 {
-            background-color: #f99f3d;
-            color: white;
-            margin-bottom: 10px;
-            padding: 5px;
-        }
-
-        header .menu {
-            background-color: #d17b26;
-            position: relative;
-            padding: 5px;
-        }
-
-        header .menu p:nth-of-type(2) {
-            position: absolute;
-            top: 5px;
-            right: 25px;
-        }
-
         /*  */
         main {
             position: relative;
@@ -46,60 +20,6 @@
         #columnaIzquierda {
             width: 50%;
             height: 500px;
-        }
-
-        #articuloPrincipal {
-            background-color: #f48000;
-            position: relative;
-            margin: 10px;
-            padding: 15px;
-            height: 175px;
-        }
-
-        #articuloPrincipal .gris {
-            background-color: #dddddc;
-            width: 35px;
-            height: 35px;
-        }
-
-        #articuloPrincipal .gris:nth-of-type(1) {
-            position: absolute;
-            top: 125px;
-            left: 25px;
-        }
-
-        #articuloPrincipal .gris:nth-of-type(2) {
-            position: absolute;
-            top: 125px;
-            left: 150px;
-        }
-
-        #articuloPrincipal p:nth-of-type(2) {
-            position: absolute;
-            top: 125px;
-            left: 75px;
-            width: 50px;
-        }
-
-        #articuloPrincipal p:nth-of-type(3) {
-            position: absolute;
-            top: 125px;
-            left: 200px;
-            width: 50px;
-        }
-
-        #listaDeEnlacesAArticulos {
-            background-color: #bb6033;
-        }
-
-        #listaDeEnlacesAArticulos>div {
-            background-color: #dddddc;
-        }
-
-        #listaDeEnlacesAArticulos .grisOscuro {
-            background-color: gray;
-            width: 25px;
-            height: 25px;
         }
 
         /* COLUMNA DERECHA */
@@ -142,10 +62,12 @@
                 <h3>Articulo principal</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt cum adipisci aperiam nam eos
                     pariatur quae totam.</p>
-                <div class="gris"></div>
-                <p>lorem ipsum</p>
-                <div class="gris"></div>
-                <p>lorem ipsum</p>
+                <div id="articulosPeq">
+                    <div class="gris"></div>
+                    <p>lorem ipsum</p>
+                    <div class="gris"></div>
+                    <p>lorem ipsum</p>
+                </div>
             </div>
             <div id="listaDeEnlacesAArticulos">
                 <h3>Lista de enlaces a articulos</h3>

@@ -1,0 +1,32 @@
+#listaDeEnlacesAArticulos {
+    background-color: #bb6033;
+    margin: 10px 10px 10px 0px;
+    padding-top: 1px;
+    padding-bottom: 15px;
+}
+#listaDeEnlacesAArticulos h3{
+    margin: 15px auto;
+}
+#listaDeEnlacesAArticulos>div {
+    background-color: #dddddc;
+    position: relative;
+}
+
+#listaDeEnlacesAArticulos .grisOscuro {
+    background-color: gray;
+    width: 50px;
+    height: 50px;
+}
+
+#listaDeEnlacesAArticulos>div {
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px;
+}
+
+#listaDeEnlacesAArticulos>div>div:nth-of-type(2) {
+    width: 70%;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+}
