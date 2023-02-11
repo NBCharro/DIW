@@ -61,6 +61,17 @@
 	letter-spacing: 1cm;
 }
 
+/* IMAGENES en el HTML*/
+/* <figure>
+	<picture>
+		<source media="(min-width:1000px)" srcset="./imagen1024.jpg">
+		<source media="(min-width:380px)" srcset="./imagen480.jpg">
+		<source media="(min-width:768px)" srcset="./imagen720.jpg">
+		<img src="./imagen1024.jpg" alt="El navegador no soporta la etiqueta figure. Obligatoria">
+	</picture>
+		<figcaption>Alhambra de Granada</figcaption>
+</figure> */
+
 /* POSICIONAMIENTO */
 * {
 	/* Posicionamiento fijo. Se sale del flujo. Mantiene los margenes */
