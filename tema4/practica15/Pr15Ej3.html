@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 15 Ejercicio 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        header,
+        #aside1,
+        article,
+        #aside2,
+        footer {
+            padding: 25px;
+        }
+
+        header {
+            background-color: #ff6347;
+            width: 100%;
+            order: -2;
+        }
+
+        #aside1 {
+            background-color: #ffd700;
+        }
+
+        article {
+            background-color: #00bfff;
+        }
+
+        #aside2 {
+            background-color: #ff69b4;
+        }
+
+        footer {
+            background-color: #90ee90;
+            width: 100%;
+        }
+
+        @media screen and (min-width:800px) {
+            #aside1 {
+                width: 20%;
+            }
+
+            article {
+                width: 60%;
+            }
+
+            #aside2 {
+                width: 20%;
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            article {
+                width: 100%;
+                order: -1;
+            }
+
+            #aside1 {
+                width: 50%;
+            }
+
+
+            #aside2 {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            article {
+                width: 100%;
+            }
+
+            #aside1 {
+                width: 100%;
+            }
+
+
+            #aside2 {
+                width: 100%;
+            }
+        }
+
+        /* Media Query. Version imprimible */
+        @media print {
+            * {
+                background-color: white;
+                color: black;
+            }
+
+            aside,
+            footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <aside id="aside1">Aside 1</aside>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus velit maiores labore officiis quia nostrum
+        expedita laboriosam cum saepe alias aut, facilis modi. A quis ducimus modi neque, voluptate iste.</article>
+    <aside id="aside2">Aside 2</aside>
+    <footer>Footer</footer>
+</body>
+
+</html>

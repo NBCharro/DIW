@@ -1,0 +1,33 @@
+#publicidad {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#publicidad>div {
+    background-color: #e7c19b;
+    margin: 2.5%;
+}
+
+#publicidad>div:nth-of-type(1) {
+    background-color: #e7c19b;
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+}
+
+#publicidad>div:nth-of-type(2) {
+    background-color: #e7c19b;
+    width: 45%;
+    height: 100px;
+    line-height: 100px;
+}
+
+#publicidad>div:nth-of-type(3) {
+    background-color: #e7c19b;
+    width: 45%;
+    height: 100px;
+    line-height: 100px;
+}

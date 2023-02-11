@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        /* Grid crea una matriz o rejilla */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #contenedorGrid {
+            width: 80%;
+            max-width: 1000px;
+            height: 800px;
+            border: 2px solid rebeccapurple;
+            display: grid;
+            /* Definimos filas. Se definen los anchos de las columnas */
+            /* grid-template-columns: 150px 37% auto; */
+            /* grid-template-columns: auto auto auto auto auto; */
+            /* En grid se usan fracciones como unidad */
+            grid-template-columns: 1fr 3fr 2fr;
+            /* Definimos columnas. Se definen los altos de las columnas */
+            /* grid-template-rows: 200px 75px 10vw 150px; */
+            grid-template-rows: 150px;
+            /* Todas las filas tendran 150px */
+            /* grid-auto-rows: 150px; */
+            /* GAP. Aire entre cajas. filas y columnas */
+            gap: 10px 20px;
+            /* gap: 50px; */
+        }
+
+        .caja {
+            font-size: 50px;
+            /* height: 100px; */
+            padding: 20px;
+            border: 2px solid royalblue;
+            background-color: aquamarine;
+        }
+
+        /* Areas: Definimos el tamaño. */
+        .caja:nth-of-type(1) {
+            /* GRID-COLUMN. Juntamos columnas. Numero de linea que empieza | Numero de linea que acaba */
+            grid-column: 1 / 4;
+            /* grid-column: 2 / 4; */
+            /* grid-column: 1 / span 3; */
+            /* Por si no sabemos donde empieza pero queremos que ocupe 3 columnas */
+            /* grid-column: span 3; */
+        }
+
+        .caja:nth-of-type(7) {
+            /* GRID-ROW. Juntamos filas. Numero de linea que empieza | Numero de linea que acaba  */
+            /* grid-row: 2 / 6; */
+            grid-row: span 2;
+        }
+
+        .caja:nth-of-type(2) {
+            grid-row: 2 / 6;
+        }
+
+        .caja:nth-of-type(9) {
+            grid-row: 6 / 7;
+        }
+
+        .caja:nth-of-type(3) {
+            /* GRID-AREA. grid-row y grid-column. Primera fila / Primera linea de la columna / Final de fila / Final de linea de columna */
+            grid-area: 6/2/8/4;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedorGrid">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+        <div class="caja">5</div>
+        <div class="caja">6</div>
+        <div class="caja">7</div>
+        <!-- <div class="caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas culpa inventore tempore
+            ipsum placeat nam suscipit eius impedit! Voluptate, corrupti. Asperiores, nobis! Nulla molestiae quod hic,
+            nihil unde illo nemo id pariatur porro reiciendis libero natus corporis quibusdam error perferendis saepe
+            quia inventore fuga ipsum ab culpa! Modi, ipsa?</div> -->
+        <div class="caja">8</div>
+        <div class="caja">9</div>
+        <div class="caja">10</div>
+        <div class="caja">11</div>
+        <div class="caja">12</div>
+    </div>
+</body>
+
+</html>
