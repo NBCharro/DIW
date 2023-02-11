@@ -2,72 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Day 2</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid Day 2</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-        #contenedorGrid {
-            width: 80%;
-            max-width: 1000px;
-            height: 500px;
-            border: 2px solid rebeccapurple;
-            display: grid;
-            /* REPEAT. Cuantas veces que se repite y lo que se repite  */
-            /* grid-template-columns: repeat(4, 1fr); */
-            /* Minimo 100px y maximo 1fr */
-            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
-            /* grid-template-columns: repeat(4, minmax(100px, auto)); */
-            /* CUANDO NO CONOCEMOS EL NUMERO DE HIJOS PARA QUE WRAPEEN: */
-            /* AUTO-FILL. Si hay pocos elementos NO se expanden hasta rellenar el ancho*/
-            /* grid-template-columns: repeat(auto-fill, minmax(100px, auto)); */
-            /* AUTO-FIT. Si hay pocos elementos se expanden hasta rellenar el ancho */
-            /* grid-template-columns: repeat(auto-fit, minmax(100px, auto)); */
-            gap: 10px 20px;
-            /* ALINEAR ELEMENTOS */
-            grid-template-columns: repeat(3, 1fr);
-            /* JUSTIFY-CONTENT Alinear horizontalmente */
-            justify-content: center;
-            /* ALIGN-CONTENT Alinear verticalmente */
-            align-content: center;
-            /* ALIGN-ITEMS. Alinear horizontalmente el contenido de cada contenedor individual */
-            justify-items: center;
-            /* ALIGN-ITEMS. Alinear verticalmente el contenido de cada contenedor individual */
-            align-items: center;
-        }
+		#contenedorGrid {
+			width: 80%;
+			max-width: 1000px;
+			height: 500px;
+			border: 2px solid rebeccapurple;
+			display: grid;
+			/* REPEAT. Cuantas veces que se repite y lo que se repite  */
+			/* grid-template-columns: repeat(4, 1fr); */
+			/* Minimo 100px y maximo 1fr */
+			/* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+			/* grid-template-columns: repeat(4, minmax(100px, auto)); */
+			/* CUANDO NO CONOCEMOS EL NUMERO DE HIJOS PARA QUE WRAPEEN: */
+			/* AUTO-FILL. Si hay pocos elementos NO se expanden hasta rellenar el ancho*/
+			/* grid-template-columns: repeat(auto-fill, minmax(100px, auto)); */
+			/* AUTO-FIT. Si hay pocos elementos se expanden hasta rellenar el ancho */
+			/* grid-template-columns: repeat(auto-fit, minmax(100px, auto)); */
+			gap: 10px 20px;
+			/* ALINEAR ELEMENTOS */
+			grid-template-columns: repeat(3, 1fr);
+			/* JUSTIFY-CONTENT Alinear horizontalmente */
+			justify-content: center;
+			/* ALIGN-CONTENT Alinear verticalmente */
+			align-content: center;
+			/* ALIGN-ITEMS. Alinear horizontalmente el contenido de cada contenedor individual */
+			justify-items: center;
+			/* ALIGN-ITEMS. Alinear verticalmente el contenido de cada contenedor individual */
+			align-items: center;
+		}
 
-        .caja {
-            font-size: 50px;
-            height: 100px;
-            width: 100px;
-            padding: 20px;
-            border: 2px solid royalblue;
-            background-color: aquamarine;
-        }
-    </style>
+		.caja {
+			font-size: 50px;
+			height: 100px;
+			width: 100px;
+			padding: 20px;
+			border: 2px solid royalblue;
+			background-color: aquamarine;
+		}
+	</style>
 </head>
 
 <body>
-    <div id="contenedorGrid">
-        <div class="caja">1</div>
-        <div class="caja">2</div>
-        <div class="caja">3</div>
-        <!-- <div class="caja">4</div>
-        <div class="caja">5</div>
-        <div class="caja">6</div>
-        <div class="caja">7</div>
-        <div class="caja">8</div>
-        <div class="caja">9</div>
-        <div class="caja">10</div>
-        <div class="caja">11</div>
-        <div class="caja">12</div> -->
-    </div>
+	<div id="contenedorGrid">
+		<div class="caja">1</div>
+		<div class="caja">2</div>
+		<div class="caja">3</div>
+		<div class="caja">4</div>
+		<div class="caja">5</div>
+		<div class="caja">6</div>
+		<div class="caja">7</div>
+		<div class="caja">8</div>
+		<div class="caja">9</div>
+		<div class="caja">10</div>
+		<div class="caja">11</div>
+		<div class="caja">12</div>
+	</div>
 </body>
 
 </html>
