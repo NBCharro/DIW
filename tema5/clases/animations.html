@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones, transiciones y animaciones</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .caja {
+            width: 200px;
+            height: 150px;
+            background-color: aquamarine;
+        }
+
+        /* TRANSFORMACIONES. tipo de transformacion(trasladar, rotar, escalarlo, deformarlo y matrix) */
+        .cajaTransformacion {
+            /* TRANSLATE ( X , Y ) */
+            transform: translate(150px, 150px);
+            /* transform: translate(-150px, 150px); */
+            /* SCALE ( cantidad a escalar ) o ( cantidad a escalar en X, cantidad a escalar en Y ) */
+            /* transform: scale(200%); */
+            transform: scale(2);
+            /* transform: scale(10%); */
+            /* transform: scale(0.1); */
+            /* transform: scale(1.5, 0.5); */
+            /* Con un valor negativo se refleja */
+            /* transform: scale(-2, -0.5); */
+            transform: scale(-1, -0.5);
+            /* ROTATE */
+            /* transform: rotate(45deg); */
+            /* transform: rotate(-60deg); */
+            /* SKEW ( angulo ) */
+            /* transform: skew(25deg); */
+            /* transform: skew(-30deg); */
+            transform: skew(-30deg, 60deg);
+            /* MATRIX aplica todas las trasnformaciones a la vez en un orden determinado */
+            /* MAS DE UN EFECTO */
+            /* transform: translate(150px, 150px) rotate(45deg) scale(-1, -0.5) skew(-30deg, 60deg); */
+        }
+
+        /* TRANSICIONES (tienen un estado inicial y un estado final y esta asociado a un evento pe hover) */
+        /* La transicion se aplica con el cambio, es decir, necesita un evento */
+        .cajaTransicion:hover {
+            background-color: purple;
+            width: 300px;
+            height: 200px;
+            transform: rotate(360deg);
+        }
+
+        .cajaTransicion {
+            /* Modificar una propiedad a la que afecta. Se aplica al hacer el cambio y al deshacer el cambio */
+            /* transition-property: background; */
+            /* transition-property: width; */
+            /* transition-property: all; */
+            /* transition-duration: 3s; */
+            /* transition-delay: 1s; */
+            /* transition-timing-function: ease-in-out; */
+            /* transition-timing-function: steps(12); */
+            /* ATAJO property duration timing-function delay */
+            /* transition: all 3s steps(12) 1s; */
+            /* Definir para las distintas transiciones distintos tiempos */
+            transition: background 5s, width 1s, height 2s, transform 8s;
+        }
+
+        /* ANIMACIONES. Tenemos que definir los fotogramas(@keyframes). */
+        .cajaAnimacion {
+            animation-name: animacion;
+            animation-duration: 5s;
+            /* animation-timing-function: steps(5); */
+            /* animation-delay: 0.5s; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: animacion 2s; */
+        }
+
+        @keyframes animacion {
+
+            /*
+            from {
+                background-color: aquamarine;
+            }
+
+            to {
+                background-color: violet;
+            }
+            */
+
+            0% {
+                background-color: blueviolet;
+                scale: (0.25);
+            }
+
+            50% {
+                background-color: orange;
+                scale: (1);
+                width: 150px;
+            }
+
+            100% {
+                background-color: violet;
+                scale: (1.75);
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="caja cajaTransformacion">Transformacion</div> -->
+    <!-- <div class="caja cajaTransicion">Transicion</div> -->
+    <div class="caja cajaAnimacion">Animacion</div>
+</body>
+
+</html>
