@@ -1,0 +1,199 @@
+/* MODELO DE CAJA */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	/* Arriba, derecha, abajo, izquierda */
+	border-style: double dashed solid dotted;
+	/* En todas las esquinas, en X un radio de 10px y en Y de 5px */
+	border-radius: 10px / 5px;
+}
+
+/* FONDOS */
+* {
+	background-image: url("./logos.png"), url("./ave.png"), url("./piedra.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	/* Propiedad que determina lo que se expande el fondo */
+	background-clip: content-box;
+	/* Propiedad que determina donde empieza el fondo */
+	background-origin: content-box;
+	background-position: top right;
+	/* Para controlar como se comporta el fondo al hacer scroll */
+	background-attachment: fixed;
+}
+
+/* FLOAT */
+* {
+	float: left;
+	/* Para evitar que a los elementos ya no les afecte el float */
+	clear: both;
+}
+
+/* DISPLAY */
+* {
+	opacity: 0.5;
+	/* Sigue ocupando sitio */
+	visibility: hidden;
+	/* No ocupa sitio */
+	display: none;
+}
+
+/* FUENTES */
+* {
+	text-transform: capitalize;
+	/* Subrayados, tachados y demas */
+	text-decoration: underline wavy blue;
+	/* Alineacion vertical de algo con respecto al texto. */
+	vertical-align: middle;
+	/* Interlineado */
+	line-height: 17px;
+	/* Sangria */
+	text-indent: -5px;
+	/* Separacion de caracteres y palabras */
+	word-spacing: 1ex;
+	letter-spacing: -5px;
+	/* Sombras */
+	text-shadow: #fff 0 1px 1px;
+	/* Extender o comprimir letras */
+	font-stretch: condensed;
+	/* Espaciado entre letras */
+	letter-spacing: 1cm;
+}
+
+/* IMAGENES en el HTML*/
+/* <figure>
+	<picture>
+		<source media="(min-width:1000px)" srcset="./imagen1024.jpg">
+		<source media="(min-width:380px)" srcset="./imagen480.jpg">
+		<source media="(min-width:768px)" srcset="./imagen720.jpg">
+		<img src="./imagen1024.jpg" alt="El navegador no soporta la etiqueta figure. Obligatoria">
+	</picture>
+		<figcaption>Alhambra de Granada</figcaption>
+</figure> */
+
+/* POSICIONAMIENTO */
+* {
+	/* Posicionamiento fijo. Se sale del flujo. Mantiene los margenes */
+	position: fixed;
+	/* Las coordenadas son siempre el HTML */
+	top: 0px;
+	right: 0px;
+}
+
+/* FLEXBOX */
+.padre {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* Atajo para flex-direction y flex-wrap */
+	flex-flow: row wrap;
+	/* Alinear en el eje principal, dependiendo si ajustamos por fila o columna*/
+	justify-content: space-evenly;
+	/* Para alinearlos en el eje secundario */
+	align-content: center;
+}
+
+.hijo {
+	/* FACTOR DE CRECIMIENTO. Por defecto 0, no crecen, se ajustan al contenido. Sigue creciendo aunque tenga un width definido.
+	    Con 1: si tienen espacio para crecer, crecen hasta ocuparlo totalmente.
+	    Con distintos valores crecen de forma distinta en cada hijo en la proporcion que le indicamos.
+	*/
+	flex-grow: 1;
+	/* FLEX-BASIS. El valor final de flex-grow lo calcula partiendo de 0 */
+	/* Los hijos parten de width/height = 0px y rellenan el espacio */
+	flex-basis: 0;
+	/* FLEX-SHRINK determina si los hijos se encojen. Si no tiene ancho inicial no sabe cuanto comprimirse. */
+	/* Si le ponemos flex-shrink a dos hijos, con valores distintos a 0, cuanto mas alto el numero, mas rapido se encojera con respecto al otro. hijo2 = 1; hijo3 = 2; El hijo3 encoje el doble de rapido que el hijo2 */
+	/* Por defecto. Se encoje. */
+	flex-shrink: 1;
+	/* No se encoje. */
+	flex-shrink: 0;
+	/* FLEX: Atajo para GROW, SHRINK y BASIS */
+	flex: 1 1 0;
+	/* ALIGN-SELF cambia el orden de un elemento del eje secundario. */
+	align-self: flex-start;
+	/* ORDER. Por defecto es 0. Cuando menor sea el orden mas al principio ira y viceversa. */
+	order: -1;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width:480px) {
+	* {
+		background-color: green;
+	}
+}
+
+/* La coma es un valor OR */
+@media screen and (min-width:480px),
+(max-width:768px) {}
+
+/* No */
+@media not screen and (min-width:480px) {}
+
+/* ORientacion Landscape y portrait */
+@media screen and (orientation:landscape) {}
+
+/* Relacion de aspecto 16/9 4/3 */
+@media screen and (aspect-ratio: 4/3) {}
+
+/* Para saber si es un dispositivo movil. hover o fine=raton ; coarse=movil */
+/* @media screen and (pointer: fine) { */
+/* @media screen and (pointer: coarse) { */
+@media screen and (hover) {}
+
+/* Si el dispositivo soporta el color */
+@media screen and (color) {}
+
+/* Lo que soporta el medio. No se usa demasiado */
+@supports (color: red) {}
+
+/* MEDIA QUERY */
+/* @media all/screen/print {} */
+@media print {
+	* {
+		background-color: white;
+		color: black;
+	}
+
+	aside,
+	footer {
+		display: none;
+	}
+}
+
+/* GRID */
+.padre {
+	display: grid;
+	/* Se definen los anchos de las columnas */
+	grid-template-columns: 1fr 3fr 2fr;
+	grid-template-columns: repeat(4, 1fr);
+	/* Se definen los altos de las columnas. Una a una */
+	grid-template-rows: 150px 250px;
+	/* Si no sabemos el numero de filas pero queremos darle alto */
+	grid-auto-rows: 150px;
+	/* Aire entre cajas. filas y columnas */
+	gap: 10px 20px;
+	/* CUANDO NO CONOCEMOS EL NUMERO DE HIJOS PARA QUE WRAPEEN: */
+	/* AUTO-FILL. Si hay pocos elementos NO se expanden hasta rellenar el ancho*/
+	grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+	/* AUTO-FIT. Si hay pocos elementos se expanden hasta rellenar el ancho */
+	grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+	/* JUSTIFY-CONTENT Alinear horizontalmente */
+	justify-content: center;
+	/* ALIGN-CONTENT Alinear verticalmente */
+	align-content: center;
+	/* ALIGN-ITEMS. Alinear horizontalmente el contenido de cada contenedor individual */
+	justify-items: center;
+	/* ALIGN-ITEMS. Alinear verticalmente el contenido de cada contenedor individual */
+	align-items: center;
+}
+
+.hijo {
+	/* GRID-COLUMN. Juntamos columnas. Numero de linea que empieza | Numero de linea que acaba */
+	grid-column: 1 / 4;
+	/* grid-column: span 3; */
+	/* GRID-ROW. Juntamos filas. Numero de linea que empieza | Numero de linea que acaba  */
+	/* grid-row: 2 / 6; */
+	grid-row: span 2;
+}
