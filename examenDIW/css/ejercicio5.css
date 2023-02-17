@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    height: 130px;
+    width: 100%;
+    color: bisque;
+    text-shadow: 1px 1px red;
+    opacity: 60%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #981a30;
+    background-image: url("../images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#logoYNombre h2 {
+    display: inline;
+}
+
+header img {
+    height: 100px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    margin: 0px 10px;
+}

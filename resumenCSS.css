@@ -28,6 +28,8 @@
 	float: left;
 	/* Para evitar que a los elementos ya no les afecte el float */
 	clear: both;
+	/* Para que no salga del flujo */
+	overflow: hidden;
 }
 
 /* DISPLAY */
@@ -59,18 +61,9 @@
 	font-stretch: condensed;
 	/* Espaciado entre letras */
 	letter-spacing: 1cm;
+	/* Versalitas: mayusculas con tamaño de minuscula */
+	font-variant: small-caps;
 }
-
-/* IMAGENES en el HTML*/
-/* <figure>
-	<picture>
-		<source media="(min-width:1000px)" srcset="./imagen1024.jpg">
-		<source media="(min-width:380px)" srcset="./imagen480.jpg">
-		<source media="(min-width:768px)" srcset="./imagen720.jpg">
-		<img src="./imagen1024.jpg" alt="El navegador no soporta la etiqueta figure. Obligatoria">
-	</picture>
-		<figcaption>Alhambra de Granada</figcaption>
-</figure> */
 
 /* POSICIONAMIENTO */
 * {
@@ -90,7 +83,8 @@
 	flex-flow: row wrap;
 	/* Alinear en el eje principal, dependiendo si ajustamos por fila o columna*/
 	justify-content: space-evenly;
-	/* Para alinearlos en el eje secundario */
+	/* Para alinearlos en el eje secundario. una fila y varias filas */
+	align-items: center;
 	align-content: center;
 }
 
@@ -196,4 +190,87 @@
 	/* GRID-ROW. Juntamos filas. Numero de linea que empieza | Numero de linea que acaba  */
 	/* grid-row: 2 / 6; */
 	grid-row: span 2;
+	/* ALIGN-SELF. Alinea al hijo en particular */
+	align-self: baseline;
+}
+
+/* IMAGENES en el HTML*/
+/* <figure>
+	<picture>
+		<source media="(min-width:1000px)" srcset="./imagen1024.jpg">
+		<source media="(min-width:380px)" srcset="./imagen480.jpg">
+		<source media="(min-width:768px)" srcset="./imagen720.jpg">
+		<img src="./imagen1024.jpg" alt="El navegador no soporta la etiqueta figure. Obligatoria">
+	</picture>
+		<figcaption>Alhambra de Granada</figcaption>
+</figure> */
+
+/* ANIMACIONES */
+* {
+	animation-name: animacion;
+	animation-duration: 5s;
+	/* animation-timing-function: steps(5); */
+	/* animation-delay: 0.5s; */
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes animacion {
+
+	/*
+	from {
+		background-color: aquamarine;
+	}
+	to {
+		background-color: violet;
+	}
+	*/
+	0% {
+		background-color: blueviolet;
+	}
+
+	50% {
+		background-color: orange;
+	}
+
+	100% {
+		background-color: violet;
+	}
+}
+
+/* TRANSICIONES. Necesita un evento que lo lance */
+*:hover {
+	background-color: purple;
+	width: 300px;
+	height: 200px;
+	transform: rotate(360deg);
+}
+
+* {
+	/* Modificar una propiedad a la que afecta. Se aplica al hacer el cambio y al deshacer el cambio */
+	/* transition-property: background; */
+	/* transition-property: width; */
+	/* transition-property: all; */
+	/* transition-duration: 3s; */
+	/* transition-delay: 1s; */
+	/* transition-timing-function: steps(12); */
+	/* transition: all 3s steps(12) 1s; */
+	transition: background 5s, width 1s, height 2s, transform 8s;
+}
+
+/* TRANSFORMACIONES */
+* {
+	/* TRANSLATE ( X , Y ) */
+	transform: translate(150px, 150px);
+	/* SCALE ( cantidad a escalar ) o ( cantidad a escalar en X, cantidad a escalar en Y ) */
+	transform: scale(10%);
+	/* Con un valor negativo se refleja */
+	/* transform: scale(-2, -0.5); */
+	/* ROTATE ( angulo )  */
+	transform: rotate(45deg);
+	/* SKEW ( angulo ) */
+	transform: skew(-30deg, 60deg);
+	/* MATRIX aplica todas las trasnformaciones a la vez en un orden determinado */
+	/* MAS DE UN EFECTO */
+	transform: translate(150px, 150px) rotate(45deg) scale(-1, -0.5) skew(-30deg, 60deg);
 }
