@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+section {
+    background-color: lightgray;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+
+section article {
+    width: 123px;
+    margin: 10px;
+    font-size: xx-large;
+    height: 2em;
+    box-shadow: 2px 1px 5px aqua;
+}
+
+section article:nth-of-type(odd) {
+    background-color: white;
+}
+
+section article:nth-of-type(even) {
+    background-color: silver;
+}
+
+section article:first-of-type {
+    border-radius: 50%;
+}
+
+section article:last-of-type {
+    border-radius: 20%;
+}
+
+@media screen and (max-width:500px) {
+    section {
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+    }
+}
